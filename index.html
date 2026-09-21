@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Concept - Dizajn enterijera i nameštaj po meri | Beograd</title>
+<meta name="description" content="ID Concept - studio za dizajn enterijera i izradu nameštaja po meri iz Beograda. Kuhinje, plakari, dnevne sobe i kancelarijski nameštaj, projekat do montaže.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --accent:#634630;
+    --accent-dark:#493022;
+    --accent-light:#8a6a4c;
+    --accent-soft:#efe7de;
+    --accent-soft-2:#e3d6c8;
+    --accent-glow:rgba(99,70,48,0.14);
+
+    --text:#241a12;
+    --text-muted:rgba(36,26,18,0.68);
+    --text-faint:rgba(36,26,18,0.46);
+
+    --bg:#fbf9f6;
+    --bg-alt:#f4efe8;
+    --white:#ffffff;
+
+    --radius-btn:3px;
+    --radius-card:18px;
+    --radius-img:14px;
+
+    --shadow-soft:0 20px 50px -25px rgba(36,26,18,0.35);
+    --shadow-hover:0 30px 60px -20px rgba(36,26,18,0.45);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Open Sans', sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  h1,h2,h3,h4{
+    font-family:'Khand', sans-serif;
+    font-weight:600;
+    color:var(--text);
+    line-height:1.1;
+  }
+
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding-left:24px;
+    padding-right:24px;
+  }
+
+  section{
+    padding-top:96px;
+    padding-bottom:96px;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-family:'Open Sans', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:0.02em;
+    padding:16px 30px;
+    border-radius:var(--radius-btn);
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--accent);
+    color:#fff;
+    box-shadow:var(--shadow-soft);
+  }
+  .btn-primary:hover{
+    background:var(--accent-dark);
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-hover);
+  }
+  .btn-outline{
+    background:transparent;
+    border-color:var(--accent);
+    color:var(--accent);
+  }
+  .btn-outline:hover{
+    background:var(--accent);
+    color:#fff;
+    transform:translateY(-2px);
+  }
+  .btn-light{
+    background:#fff;
+    color:var(--accent-dark);
+  }
+  .btn-light:hover{
+    background:var(--accent-soft);
+    transform:translateY(-2px);
+  }
+
+  /* ---------- HEADER ---------- */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(251,249,246,0.98);
+    border-bottom:1px solid rgba(99,70,48,0.1);
+    transition:backdrop-filter .3s ease, box-shadow .3s ease;
+  }
+  .site-header.scrolled{
+    backdrop-filter:blur(14px);
+    background:rgba(251,249,246,0.85);
+    box-shadow:0 8px 24px -18px rgba(36,26,18,0.3);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    padding-bottom:16px;
+    gap:24px;
+  }
+  .logo img{height:34px;width:auto;}
+  .nav-desktop{
+    display:flex;
+    gap:36px;
+    flex:1;
+    justify-content:center;
+  }
+  .nav-desktop a{
+    font-size:15px;
+    font-weight:600;
+    color:var(--text-muted);
+    transition:color .2s ease;
+  }
+  .nav-desktop a:hover{color:var(--accent);}
+  .nav-cta{flex-shrink:0;}
+
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:32px;
+    height:28px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+  }
+  .hamburger span{
+    display:block;
+    width:100%;
+    height:2px;
+    background:var(--text);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.active span:nth-child(2){opacity:0;}
+  .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    padding-left:24px;
+    padding-right:24px;
+    padding-bottom:20px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+  }
+  .mobile-menu.open{
+    display:flex;
+    max-height:400px;
+  }
+  .mobile-menu a{
+    padding-top:12px;
+    padding-bottom:12px;
+    font-size:16px;
+    font-weight:600;
+    color:var(--text);
+    border-bottom:1px solid rgba(99,70,48,0.08);
+  }
+  .mobile-menu .btn{margin-top:14px;width:100%;}
+
+  @media (max-width:991px){
+    .nav-desktop, .nav-cta{display:none;}
+    .hamburger{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    background-image:
+      linear-gradient(120deg, rgba(36,20,10,0.82) 0%, rgba(36,20,10,0.55) 45%, rgba(36,20,10,0.25) 100%),
+      url('assets/Dizajn-enterijera-i-namestaja-i-kompletno-opremanje-za-moderan-stan-u-Beogradu-na-vodi-14.jpg');
+    background-size:cover;
+    background-position:center;
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+  .hero-content{
+    max-width:640px;
+    color:#fff;
+  }
+  .hero-eyebrow{
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:#e0cdb8;
+    margin-bottom:20px;
+    display:block;
+  }
+  .hero h1{
+    font-size:clamp(38px, 6vw, 64px);
+    font-weight:700;
+    color:#fff;
+    margin-bottom:24px;
+  }
+  .hero p{
+    font-size:19px;
+    color:rgba(255,255,255,0.88);
+    max-width:520px;
+    margin-bottom:36px;
+  }
+
+  /* ---------- BOL SECTION ---------- */
+  .bol{
+    background:var(--accent-soft);
+    padding-top:72px;
+    padding-bottom:72px;
+  }
+  .bol .wrap{
+    max-width:820px;
+    text-align:center;
+  }
+  .bol p{
+    font-size:20px;
+    color:var(--text);
+    font-weight:400;
+    line-height:1.7;
+  }
+  .bol p + p{margin-top:16px;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
+  .section-head.center{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+  .eyebrow{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:14px;
+    display:block;
+  }
+  .section-head h2{
+    font-size:clamp(30px, 4vw, 44px);
+    margin-bottom:16px;
+  }
+  .section-head p{
+    font-size:17px;
+    color:var(--text-muted);
+    max-width:480px;
+  }
+  .section-head.center p{margin-left:auto;margin-right:auto;}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:24px;
+  }
+  .service-card{
+    background:#fff;
+    border:1px solid rgba(99,70,48,0.12);
+    border-radius:var(--radius-card);
+    padding:36px 28px;
+    transition:box-shadow .3s ease, transform .3s ease;
+  }
+  .service-card:hover{
+    box-shadow:var(--shadow-soft);
+    transform:translateY(-4px);
+  }
+  .icon-box{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:var(--accent-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+  }
+  .icon-box svg{width:26px;height:26px;stroke:var(--accent);}
+  .service-card h3{
+    font-size:22px;
+    margin-bottom:10px;
+  }
+  .service-card p{
+    font-size:15px;
+    color:var(--text-muted);
+    max-width:65ch;
+  }
+
+  @media (max-width:991px){
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .services-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- OFFICE STRIP ---------- */
+  .office-strip{
+    background:var(--bg-alt);
+  }
+  .office-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .office-text h3{
+    font-size:30px;
+    margin-bottom:16px;
+  }
+  .office-text p{
+    font-size:16px;
+    color:var(--text-muted);
+    max-width:52ch;
+    margin-bottom:14px;
+  }
+  .office-photos{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .office-photos img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:var(--radius-img);
+  }
+  .office-photos img:first-child{
+    grid-column:1 / -1;
+    height:180px;
+  }
+  @media (max-width:768px){
+    .office-inner{grid-template-columns:1fr;gap:32px;}
+  }
+
+  /* ---------- KAKO RADIMO ---------- */
+  .approach-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  .approach-card{
+    padding:36px 30px;
+    border-radius:var(--radius-card);
+    background:var(--white);
+    border:1px solid rgba(99,70,48,0.12);
+    position:relative;
+    overflow:hidden;
+  }
+  .approach-card::before{
+    content:'';
+    position:absolute;
+    top:-60px;
+    right:-60px;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-glow), transparent 70%);
+  }
+  .approach-num{
+    font-family:'Khand', sans-serif;
+    font-size:44px;
+    font-weight:700;
+    color:var(--accent-soft-2);
+    margin-bottom:12px;
+  }
+  .approach-card h3{
+    font-size:23px;
+    margin-bottom:12px;
+    position:relative;
+  }
+  .approach-card p{
+    font-size:15px;
+    color:var(--text-muted);
+    position:relative;
+    max-width:65ch;
+  }
+  @media (max-width:900px){
+    .approach-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- PORTFOLIO ---------- */
+  .portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .portfolio-item{
+    border-radius:var(--radius-card);
+    overflow:hidden;
+    position:relative;
+    background:#fff;
+    border:1px solid rgba(99,70,48,0.1);
+    transition:box-shadow .3s ease, transform .3s ease;
+  }
+  .portfolio-item:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-soft);
+  }
+  .portfolio-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+  }
+  .portfolio-caption{
+    padding:16px 18px;
+  }
+  .portfolio-caption span{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:block;
+    margin-bottom:6px;
+  }
+  .portfolio-caption p{
+    font-size:14px;
+    color:var(--text-muted);
+  }
+  @media (max-width:991px){
+    .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .portfolio-grid{grid-template-columns:1fr;}
+  }
+
+  .portfolio-cta{
+    text-align:center;
+    margin-top:48px;
+  }
+
+  /* ---------- O BRENDU ---------- */
+  .about-section{
+    background:var(--bg-alt);
+  }
+  .about-inner{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:64px;
+    align-items:center;
+  }
+  .about-text h2{
+    font-size:clamp(28px,4vw,40px);
+    margin-bottom:20px;
+  }
+  .about-text p{
+    font-size:16px;
+    color:var(--text-muted);
+    max-width:56ch;
+    margin-bottom:16px;
+  }
+  .about-traits{
+    display:flex;
+    gap:28px;
+    margin-top:28px;
+    flex-wrap:wrap;
+  }
+  .trait{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:14px;
+    color:var(--accent-dark);
+  }
+  .trait svg{width:20px;height:20px;stroke:var(--accent);}
+
+  .about-media{
+    background:#fff;
+    border-radius:var(--radius-card);
+    overflow:hidden;
+    border:1px solid rgba(99,70,48,0.12);
+  }
+  .about-media img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+  }
+  .about-media-caption{
+    padding:20px 24px;
+  }
+  .about-media-caption span{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:block;
+    margin-bottom:6px;
+  }
+  .about-media-caption p{
+    font-size:14px;
+    color:var(--text-muted);
+  }
+
+  @media (max-width:900px){
+    .about-inner{grid-template-columns:1fr;gap:36px;}
+  }
+
+  /* ---------- CTA / KONTAKT ---------- */
+  .contact-section{
+    background:var(--accent-dark);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-section::before{
+    content:'';
+    position:absolute;
+    top:-140px;
+    left:50%;
+    transform:translateX(-50%);
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
+    pointer-events:none;
+  }
+  .contact-inner{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+    position:relative;
+  }
+  .contact-info .eyebrow{color:#e0cdb8;}
+  .contact-info h2{
+    color:#fff;
+    font-size:clamp(30px,4vw,42px);
+    margin-bottom:18px;
+  }
+  .contact-info p{
+    color:rgba(255,255,255,0.78);
+    max-width:48ch;
+    margin-bottom:36px;
+    font-size:16px;
+  }
+  .contact-detail{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:22px;
+  }
+  .contact-detail svg{
+    width:22px;
+    height:22px;
+    stroke:#e0cdb8;
+    flex-shrink:0;
+    margin-top:2px;
+  }
+  .contact-detail strong{
+    display:block;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:2px;
+  }
+  .contact-detail span{
+    font-size:15px;
+    color:rgba(255,255,255,0.75);
+  }
+
+  .contact-form{
+    background:#fff;
+    border-radius:var(--radius-card);
+    padding:40px;
+    color:var(--text);
+  }
+  .contact-form h3{
+    font-size:24px;
+    margin-bottom:6px;
+  }
+  .contact-form > p{
+    font-size:14px;
+    color:var(--text-muted);
+    margin-bottom:28px;
+  }
+  .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  .form-group{margin-bottom:16px;}
+  .form-group label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:6px;
+    color:var(--text);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+    width:100%;
+    padding:13px 16px;
+    border:1px solid rgba(99,70,48,0.25);
+    border-radius:var(--radius-btn);
+    font-family:'Open Sans', sans-serif;
+    font-size:15px;
+    color:var(--text);
+    background:var(--bg);
+    transition:border-color .2s ease;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus{
+    outline:none;
+    border-color:var(--accent);
+  }
+  .form-group textarea{resize:vertical;min-height:100px;}
+  .contact-form .btn{width:100%;margin-top:6px;}
+
+  @media (max-width:900px){
+    .contact-inner{grid-template-columns:1fr;gap:40px;}
+  }
+  @media (max-width:560px){
+    .form-row{grid-template-columns:1fr;}
+    .contact-form{padding:28px;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer{
+    background:var(--bg-alt);
+    padding-top:56px;
+    padding-bottom:32px;
+    border-top:1px solid rgba(99,70,48,0.12);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:32px;
+    padding-bottom:32px;
+    border-bottom:1px solid rgba(99,70,48,0.12);
+    margin-bottom:24px;
+  }
+  .footer-col h4{
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:16px;
+    color:var(--accent-dark);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  .footer-col a, .footer-col span{
+    display:block;
+    font-size:14px;
+    color:var(--text-muted);
+    margin-bottom:10px;
+  }
+  .footer-col a:hover{color:var(--accent);}
+  .footer-logo img{height:30px;margin-bottom:14px;}
+  .footer-logo p{
+    font-size:14px;
+    color:var(--text-muted);
+    max-width:38ch;
+  }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:13px;
+    color:var(--text-faint);
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{
+    opacity:1;
+    transform:translateY(14px);
+    transition:transform .6s ease, opacity .6s ease;
+  }
+  .reveal.is-visible{
+    transform:translateY(0);
+  }
+
+  /* ---------- MISC RESPONSIVE ---------- */
+  @media (max-width:768px){
+    section{padding-top:64px;padding-bottom:64px;}
+    .hero{min-height:auto;padding-top:100px;padding-bottom:80px;}
+    .hero h1{font-size:clamp(32px,8vw,44px);}
+    .hero p{font-size:17px;}
+    .bol p{font-size:17px;}
+  }
+  @media (max-width:480px){
+    .wrap{padding-left:20px;padding-right:20px;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="ID Concept - studio za dizajn enterijera i nameštaj po meri">
+      </a>
+      <nav class="nav-desktop">
+        <a href="#usluge">Usluge</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#o-nama">O nama</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a href="#kontakt" class="btn btn-primary nav-cta">Zatraži ponudu</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#usluge">Usluge</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#o-nama">O nama</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-primary">Zatraži ponudu</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+        <span class="hero-eyebrow">ID Concept · Beograd</span>
+        <h1>Enterijer i nameštaj po meri, tačno onako kako zamišljaš svoj prostor</h1>
+        <p>Projektujemo enterijer i pravimo nameštaj po meri za stanove, kuće i poslovne prostore u Beogradu. Vodimo ceo posao, od skice do montaže, tako da ti ne trčiš između pet izvođača.</p>
+        <a href="#kontakt" class="btn btn-primary">Zatraži besplatnu ponudu za projekat</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOL UVOD -->
+  <section class="bol">
+    <div class="wrap">
+      <p>Zamišljaš dnevnu sobu koja izgleda kao iz kataloga, a dobiješ plakar koji ne staje u ugao i kuhinju koja ne prati stil ostatka stana.</p>
+      <p>Radovi kasne, majstori se ne slažu međusobno, a ti provodiš vikende trčeći između tri firme da sve to poveže u jednu celinu.</p>
+      <p>Kod nas jedan tim vodi ceo projekat, od prve skice do poslednjeg šrafa, tako da ne moraš ti da budeš koordinator.</p>
+    </div>
+  </section>
+
+  <!-- USLUGE -->
+  <section id="usluge">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Šta radimo</span>
+        <h2>Dizajn i nameštaj, spojeni u jedan proces</h2>
+        <p>Od projekta enterijera do izrade komada nameštaja koji tačno stanu u prostor koji imaš.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"></path>
+              <path d="M14 6l3 3"></path>
+            </svg>
+          </div>
+          <h3>Dizajn i projektovanje enterijera</h3>
+          <p>Pravimo koncept, 3D vizuelizaciju i tehničke crteže za tvoj stan, kuću ili poslovni prostor, pre nego što se pokrene bilo kakav rad.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="1"></rect>
+              <path d="M3 10h18"></path>
+              <path d="M9 4v6"></path>
+            </svg>
+          </div>
+          <h3>Kuhinje po meri</h3>
+          <p>Radimo kuhinje koje prate raspored tvog prostora, sa materijalima i šarama koje ti biraš u razgovoru sa dizajnerom.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="3" width="16" height="18" rx="1"></rect>
+              <path d="M12 3v18"></path>
+              <path d="M8 11h.01"></path>
+              <path d="M16 11h.01"></path>
+            </svg>
+          </div>
+          <h3>Plakari i dnevne sobe po meri</h3>
+          <p>Izrađujemo plakare, regale i nameštaj za dnevnu sobu tačno po dimenzijama prostorije, bez praznog hoda pored zida.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="6" width="18" height="12" rx="1"></rect>
+              <path d="M3 6l9-3 9 3"></path>
+              <path d="M8 18v2"></path>
+              <path d="M16 18v2"></path>
+            </svg>
+          </div>
+          <h3>Kancelarijski nameštaj po meri</h3>
+          <p>Opremamo kancelarije stolovima, radnim stanicama i sedenjem koje odgovara broju ljudi i tipu posla koji radiš.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICE STRIP -->
+  <section class="office-strip">
+    <div class="wrap office-inner">
+      <div class="office-text reveal">
+        <span class="eyebrow">Za poslovni prostor</span>
+        <h3>Kancelarija koja izgleda ozbiljno i radi kako treba</h3>
+        <p>Biramo radne stolove, stolice i sedenje za zajedničke prostore tako da prostor prati broj ljudi i način na koji tim zaista radi.</p>
+        <p>Sve se uklapa u jedinstven vizuelni identitet prostora, umesto da izgleda kao spoj slučajnih komada iz kataloga.</p>
+      </div>
+      <div class="office-photos">
+        <img src="assets/id-concept-kancelarijski-stolovi.jpg" alt="Kancelarijski radni stolovi sa mrežastim stolicama u poslovnom prostoru">
+        <img src="assets/id-concept-kancelarijske-stolice-1.jpg" alt="Kancelarijske fotelje u različitim bojama tapacirunga">
+        <img src="assets/id-concept-kancelarijske-sofe.jpg" alt="Modularne kancelarijske sofe za zajedničke prostorije">
+      </div>
+    </div>
+  </section>
+
+  <!-- KAKO RADIMO -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Kako radimo s tobom</span>
+        <h2>Tri načina da dođeš do prostora koji ti odgovara</h2>
+      </div>
+
+      <div class="approach-grid">
+        <div class="approach-card reveal">
+          <div class="approach-num">01</div>
+          <h3>Ključ u ruke</h3>
+          <p>Ti kažeš kako želiš da izgleda i funkcioniše prostor, mi vodimo projekat, nabavku i izvođače do useljenja.</p>
+        </div>
+        <div class="approach-card reveal">
+          <div class="approach-num">02</div>
+          <h3>Kreirajmo zajedno</h3>
+          <p>Radiš sa dizajnerom rame uz rame, biraš materijale i raspored, a mi pretvaramo tvoje ideje u tehnički izvodljivo rešenje.</p>
+        </div>
+        <div class="approach-card reveal">
+          <div class="approach-num">03</div>
+          <h3>Dizajn bez renoviranja</h3>
+          <p>Ne planiraš gradjevinske radove, samo želiš nov nameštaj i raspored. Radimo i to, bez rušenja zidova i bušenja podova.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" style="background:var(--bg-alt);">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Nekoliko prostora koje smo projektovali i opremili</h2>
+        <p>Svaki projekat kreće od stvarnih dimenzija i stvarnih potreba ljudi koji tamo žive ili rade.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal">
+          <img src="assets/Dizajn-enterijera-i-namestaja-i-kompletno-opremanje-za-moderan-stan-u-Beogradu-na-vodi-14.jpg" alt="Moderan stan na Beogradu na vodi sa kuhinjom i dnevnom sobom opremljenim po meri">
+          <div class="portfolio-caption">
+            <span>Stan · Beograd na vodi</span>
+            <p>Kompletno opremanje kuhinje, dnevne sobe i garderobera u jednom projektu.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <img src="assets/Dizajn-enterijera-i-namestaj-po-meri-Luksuz-u-malo-kvadrata-23.jpg" alt="Mali stan sa kuhinjom i dnevnom sobom u istom prostoru, opremljen nameštajem po meri">
+          <div class="portfolio-caption">
+            <span>Stan · manji kvadratni metri</span>
+            <p>Kuhinja i dnevna soba u jednom prostoru, raspoređene tako da ništa ne smeta.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <img src="assets/Sta-je-moderan-stil-u-enterijeru_3-300x200.jpeg" alt="Dnevna soba u modernom stilu sa drvenim policama i sivim nameštajem">
+          <div class="portfolio-caption">
+            <span>Dnevna soba · moderan stil</span>
+            <p>Kombinacija drveta i toplih neutralnih tonova, bez suvišnih detalja.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <img src="assets/kancelarijski-namestaj-id-concept-1-300x200.png" alt="Kancelarijski prostor sa radnim stolovima opremljen po meri">
+          <div class="portfolio-caption">
+            <span>Poslovni prostor</span>
+            <p>Radne stanice i osvetljenje prilagođeni rasporedu tima koji tu sedi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-cta reveal">
+        <a href="#kontakt" class="btn btn-outline">Pošalji mi slične ideje za moj prostor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- O BRENDU -->
+  <section id="o-nama" class="about-section">
+    <div class="wrap about-inner">
+      <div class="about-text reveal">
+        <span class="eyebrow">O studiju</span>
+        <h2>ID Concept je studio iz Beograda, ne posrednik između tebe i deset firmi</h2>
+        <p>Radimo dizajn enterijera i nameštaj po meri od prve skice do poslednjeg detalja montaže. Nema prepiske između dizajnera, majstora i tebe kao trećeg posrednika - ti razgovaraš direktno sa timom koji vodi projekat.</p>
+        <p>Svaki prostor tretiramo kao poseban zadatak, ne kao ponavljanje istog kataloškog rešenja. Zato pitanja o dimenzijama, materijalima i navikama ljudi koji tu žive ili rade dolaze pre svake skice.</p>
+        <div class="about-traits">
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7l7-4z"></path></svg>
+            Profesionalan pristup
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M5 8c2-3 5-4 7-2s5 1 7-2"></path></svg>
+            Sofisticiran dizajn
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>
+            Personalizovano rešenje
+          </div>
+        </div>
+      </div>
+
+      <div class="about-media reveal">
+        <img src="assets/savetnik-tv-happy-irena-karlicic-300x200.jpg" alt="Predstavnica ID Concept-a govori o dizajnu enterijera u televizijskoj emisiji Savetnik">
+        <div class="about-media-caption">
+          <span>Medijsko gostovanje</span>
+          <p>O dizajnu enterijera i nameštaju po meri govorili smo i u televizijskoj emisiji Savetnik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT / CTA -->
+  <section id="kontakt" class="contact-section">
+    <div class="wrap contact-inner">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Zakaži razgovor</span>
+        <h2>Pošalji zahtev i dobij predlog rešenja za svoj prostor</h2>
+        <p>Napiši nam kakav prostor imaš i šta te muči u njemu. Vraćamo se s predlogom pravca i okvirnom procenom, bez obaveze.</p>
+
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2z"></path></svg>
+          <div>
+            <strong>Telefon</strong>
+            <span>+381 60 123 4567</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg>
+          <div>
+            <strong>Email</strong>
+            <span>info@idconcept.rs</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div>
+            <strong>Lokacija</strong>
+            <span>Beograd, radimo u celoj Srbiji</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" action="#" method="post">
+        <h3>Pošalji zahtev za ponudu</h3>
+        <p>Popuni formu, javljamo se u toku jednog radnog dana.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ime">Ime i prezime</label>
+            <input type="text" id="ime" name="ime" placeholder="Tvoje ime" required>
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="06X XXX XXXX" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tvoja@email.adresa" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tip">Vrsta projekta</label>
+          <select id="tip" name="tip">
+            <option>Stan ili kuća</option>
+            <option>Poslovni prostor</option>
+            <option>Samo nameštaj po meri</option>
+            <option>Nisam siguran/na</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="poruka">Opiši ukratko prostor i šta ti treba</label>
+          <textarea id="poruka" name="poruka" placeholder="Npr. dvosoban stan od 55m², treba kuhinja i plakar za spavaću sobu"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Pošalji zahtev za ponudu</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-col footer-logo">
+          <img src="assets/logo.png" alt="ID Concept logo">
+          <p>Studio za dizajn enterijera i izradu nameštaja po meri, iz Beograda.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usluge</h4>
+          <a href="#usluge">Dizajn enterijera</a>
+          <a href="#usluge">Kuhinje po meri</a>
+          <a href="#usluge">Plakari i dnevne sobe</a>
+          <a href="#usluge">Kancelarijski nameštaj</a>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#o-nama">O nama</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <span>+381 60 123 4567</span>
+          <span>info@idconcept.rs</span>
+          <span>Beograd, Srbija</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 ID Concept. Sva prava zadržana.</span>
+        <span>Dizajn i projektovanje enterijera · Nameštaj po meri</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll state
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 10){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active');
+      hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    if('IntersectionObserver' in window){
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
+
+</body>
+</html>
