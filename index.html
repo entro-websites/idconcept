@@ -96,6 +96,7 @@
 
   .head{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:end;margin-bottom:64px;}
   .head p{font-size:16px;}
+  .head-tight{margin-bottom:40px;}
   @media (max-width:900px){.head{grid-template-columns:1fr;gap:24px;margin-bottom:48px;}}
 
   /* ---------- DUGME: jedan stil, orah ---------- */
@@ -334,25 +335,25 @@
 
   /* ---------- 02 TRI NAČINA ---------- */
   .pkg-tabs{display:grid;grid-template-columns:repeat(3, 1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-card) var(--r-card) 0 0;overflow:hidden;background:var(--white);}
-  .pkg-tab{text-align:left;padding-top:24px;padding-bottom:24px;padding-left:28px;padding-right:28px;border-right:1px solid var(--line);position:relative;transition:background .3s ease;}
+  .pkg-tab{text-align:left;padding-top:16px;padding-bottom:16px;padding-left:24px;padding-right:24px;border-right:1px solid var(--line);position:relative;transition:background .3s ease;}
   .pkg-tab:last-child{border-right:0;}
   .pkg-tab::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--walnut);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);}
   .pkg-tab[aria-selected="true"]{background:var(--paper);}
   .pkg-tab[aria-selected="true"]::after{transform:scaleX(1);}
-  .pkg-tab small{display:block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--walnut);margin-bottom:8px;}
-  .pkg-tab strong{display:block;font-family:var(--head);font-size:28px;font-weight:500;line-height:1.1;margin-bottom:4px;}
+  .pkg-tab small{display:block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--walnut);margin-bottom:4px;}
+  .pkg-tab strong{display:block;font-family:var(--head);font-size:24px;font-weight:500;line-height:1.1;margin-bottom:4px;}
   .pkg-tab span{font-size:12px;color:var(--text-muted);line-height:1.5;display:block;}
   .pkg-tab:hover{background:var(--paper);}
 
   .pkg{display:grid;grid-template-columns:0.8fr 1.2fr;border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r-card) var(--r-card);overflow:hidden;background:var(--white);}
-  .pkg-media{position:relative;min-height:480px;background:var(--espresso-3);}
+  .pkg-media{position:relative;min-height:360px;background:var(--espresso-3);}
   .pkg-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s ease;}
   .pkg-media img[hidden]{display:block;opacity:0;}
-  .pkg-body{padding-top:48px;padding-bottom:48px;padding-left:48px;padding-right:48px;}
-  .pkg-quote{font-family:var(--head);font-size:32px;line-height:1.15;color:var(--text);margin-bottom:16px;}
-  .pkg-desc{margin-bottom:32px;}
+  .pkg-body{padding-top:32px;padding-bottom:32px;padding-left:40px;padding-right:40px;}
+  .pkg-quote{font-family:var(--head);font-size:24px;line-height:1.2;color:var(--text);margin-bottom:8px;}
+  .pkg-desc{margin-bottom:16px;}
   .pkg-list{display:grid;grid-template-columns:1fr 1fr;column-gap:32px;}
-  .pkg-list li{display:flex;gap:12px;align-items:flex-start;padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.4;transition:color .3s ease, opacity .3s ease;}
+  .pkg-list li{display:flex;gap:12px;align-items:flex-start;padding-top:8px;padding-bottom:8px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.4;transition:color .3s ease, opacity .3s ease;}
   .pkg-list li::before{
     content:"";flex:0 0 20px;height:20px;margin-top:0;border-radius:50%;
     background:var(--walnut) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.5L14 7.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat;
@@ -362,7 +363,7 @@
   .pkg[data-pkg="b"] .pkg-list li[data-b="0"]{color:var(--text-faint);text-decoration:line-through;text-decoration-color:var(--line-strong);}
   .pkg[data-pkg="b"] .pkg-list li[data-b="0"]::before{background:transparent;box-shadow:inset 0 0 0 1px var(--line-strong);}
   .pkg-legend{display:flex;flex-wrap:wrap;gap:24px;margin-top:24px;font-size:12px;color:var(--text-muted);line-height:1.5;}
-  .pkg-note{margin-top:24px;padding-top:16px;padding-bottom:16px;padding-left:20px;padding-right:20px;background:var(--paper);border-left:2px solid var(--walnut);font-size:12px;line-height:1.6;color:var(--text-muted);max-width:none;}
+  .pkg-note{margin-top:16px;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background:var(--paper);border-left:2px solid var(--walnut);font-size:12px;line-height:1.6;color:var(--text-muted);max-width:none;}
   .pkg-anim{animation:panelIn .5s var(--ease);}
   @keyframes panelIn{from{opacity:0.3;transform:translateY(8px);}to{opacity:1;transform:none;}}
   @media (max-width:991px){
@@ -677,7 +678,7 @@
   .footer h4{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--walnut-lite);margin-bottom:20px;}
   .footer li{margin-bottom:12px;font-size:16px;}
   .footer a:hover{color:var(--on-dark);}
-  .footer-big{font-family:var(--head);font-weight:300;font-size:clamp(64px, 16vw, 224px);line-height:0.8;letter-spacing:-0.02em;color:transparent;-webkit-text-stroke:1px var(--dark-line-strong);margin-top:64px;white-space:nowrap;overflow:hidden;}
+  .footer-big{font-family:var(--head);font-weight:300;font-size:clamp(64px, 16vw, 224px);line-height:0.8;letter-spacing:-0.02em;color:transparent;-webkit-text-stroke:1px var(--dark-line-strong);margin-top:64px;white-space:nowrap;overflow:hidden;text-align:center;}
   .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:32px;font-size:12px;color:var(--on-dark-faint);border-top:1px solid var(--dark-line);margin-top:32px;}
   @media (max-width:991px){.footer-top{grid-template-columns:1fr 1fr;}}
   @media (max-width:600px){.footer-top{grid-template-columns:1fr;gap:32px;}}
@@ -844,7 +845,7 @@
     <!-- 02 TRI NAČINA SARADNJE -->
     <section class="section tint" id="saradnja">
       <div class="wrap">
-        <div class="head reveal">
+        <div class="head head-tight reveal">
           <div>
             <span class="tag">02 / Tri načina saradnje</span>
             <h2>Biraš koliko posla<br>preuzimamo mi</h2>
@@ -1188,7 +1189,7 @@
       <div class="wrap faq-grid">
         <div class="head reveal">
           <span class="tag">10 / Pitanja</span>
-          <h2>Pre nego<br>što pišeš</h2>
+          <h2>Pre nego što pišeš</h2>
           <p>Ovo nas najčešće pitaju pre prvog sastanka. Ako tvoje pitanje nije tu, pozovi.</p>
           <a href="tel:+38163334514" class="link-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span>063/334-514</span></a>
         </div>
