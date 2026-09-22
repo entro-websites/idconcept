@@ -4,1123 +4,1484 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ID Concept - Dizajn enterijera i nameštaj po meri | Beograd</title>
-<meta name="description" content="ID Concept - studio za dizajn enterijera i izradu nameštaja po meri iz Beograda. Kuhinje, plakari, dnevne sobe i kancelarijski nameštaj, projekat do montaže.">
+<meta name="description" content="ID Concept iz Beograda projektuje enterijer i izrađuje nameštaj po meri: kuhinje, ormane, dnevne sobe i kancelarije. Ključ u ruke, Kreirajmo zajedno ili Dizajn bez renoviranja. Ledine, 063/334-514.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <style>
-
   :root{
-    --accent:#634630;
-    --accent-dark:#493022;
-    --accent-light:#8a6a4c;
-    --accent-soft:#efe7de;
-    --accent-soft-2:#e3d6c8;
-    --accent-glow:rgba(99,70,48,0.14);
+    /* orah: jedna porodica brend boje */
+    --walnut:#634630;
+    --walnut-dark:#4a3222;
+    --walnut-deep:#2b1d14;
+    --walnut-lite:#b08a64;
+    --walnut-pale:#d9c3a8;
+    --walnut-soft:rgba(99,70,48,0.08);
+    --walnut-glow:rgba(176,138,100,0.22);
 
-    --text:#241a12;
-    --text-muted:rgba(36,26,18,0.68);
-    --text-faint:rgba(36,26,18,0.46);
+    --espresso:#18110c;
+    --espresso-2:#21180f;
+    --espresso-3:#2c2118;
 
-    --bg:#fbf9f6;
-    --bg-alt:#f4efe8;
+    --paper:#f7f3ed;
+    --paper-2:#efe7dc;
     --white:#ffffff;
 
-    --radius-btn:3px;
-    --radius-card:18px;
-    --radius-img:14px;
+    --text:#1d150f;
+    --text-muted:rgba(29,21,15,0.68);
+    --text-faint:rgba(29,21,15,0.44);
+    --line:rgba(29,21,15,0.12);
+    --line-strong:rgba(29,21,15,0.28);
 
-    --shadow-soft:0 20px 50px -25px rgba(36,26,18,0.35);
-    --shadow-hover:0 30px 60px -20px rgba(36,26,18,0.45);
+    --on-dark:#f3ece3;
+    --on-dark-muted:rgba(243,236,227,0.66);
+    --on-dark-faint:rgba(243,236,227,0.40);
+    --dark-line:rgba(243,236,227,0.14);
+    --dark-line-strong:rgba(243,236,227,0.32);
+
+    --head:'Khand', sans-serif;
+    --body:'Open Sans', sans-serif;
+
+    --r-btn:4px;
+    --r-card:8px;
+    --ease:cubic-bezier(.22,.8,.24,1);
+
+    /* godovi drveta: turbulencija razvučena po vertikali */
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='960'%3E%3Cfilter id='a' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.07 0.0035' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.06 0 0 0 0 0.03 2.2 0 0 0 -0.95'/%3E%3C/filter%3E%3Cfilter id='b' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8 0.01' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0 0.02 1.1 0 0 0 -0.48'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23b)'/%3E%3C/svg%3E");
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;scroll-padding-top:96px;}
   body{
-    font-family:'Open Sans', sans-serif;
+    background:var(--paper);
     color:var(--text);
-    background:var(--bg);
-    font-weight:400;
-    line-height:1.6;
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.7;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  img{max-width:100%;display:block;}
-  a{text-decoration:none;color:inherit;}
-  ul{list-style:none;}
-  h1,h2,h3,h4{
-    font-family:'Khand', sans-serif;
-    font-weight:600;
-    color:var(--text);
-    line-height:1.1;
-  }
+  h1,h2,h3,h4{font-family:var(--head);font-weight:500;line-height:1.02;letter-spacing:-0.01em;color:inherit;}
+  h2{font-size:clamp(40px, 5vw, 64px);}
+  h3{font-size:28px;line-height:1.1;}
+  p{color:var(--text-muted);max-width:62ch;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  ul,ol{list-style:none;}
+  button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+  em{font-style:normal;color:var(--walnut);}
+  .dark em{color:var(--walnut-lite);}
+  ::selection{background:var(--walnut);color:#fff;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
-  .wrap{
-    max-width:1280px;
-    margin:0 auto;
-    padding-left:24px;
-    padding-right:24px;
-  }
+  .wrap{max-width:1280px;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;}
+  @media (max-width:768px){.wrap{padding-left:20px;padding-right:20px;}}
 
-  section{
-    padding-top:96px;
-    padding-bottom:96px;
-  }
+  .section{padding-top:128px;padding-bottom:128px;position:relative;}
+  @media (max-width:768px){.section{padding-top:80px;padding-bottom:80px;}}
 
-  /* ---------- BUTTONS ---------- */
+  .dark{background:var(--espresso);color:var(--on-dark);}
+  .dark p{color:var(--on-dark-muted);}
+  .tint{background:var(--paper-2);}
+
+  .tag{
+    display:inline-flex;align-items:center;gap:12px;
+    font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;line-height:1.4;
+    color:var(--walnut);
+    margin-bottom:24px;
+  }
+  .tag::before{content:"";width:32px;height:1px;background:currentColor;}
+  .dark .tag{color:var(--walnut-lite);}
+
+  .head{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:end;margin-bottom:64px;}
+  .head p{font-size:16px;}
+  @media (max-width:900px){.head{grid-template-columns:1fr;gap:24px;margin-bottom:48px;}}
+
+  /* ---------- DUGME: jedan stil, orah ---------- */
   .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    font-family:'Open Sans', sans-serif;
-    font-weight:700;
-    font-size:15px;
-    letter-spacing:0.02em;
-    padding:16px 30px;
-    border-radius:var(--radius-btn);
-    border:2px solid transparent;
-    cursor:pointer;
-    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    display:inline-flex;align-items:center;justify-content:center;gap:12px;
+    padding-top:16px;padding-bottom:16px;padding-left:28px;padding-right:28px;
+    background:var(--walnut);color:#fff;
+    font-family:var(--body);font-size:16px;font-weight:600;letter-spacing:0.01em;line-height:1.2;
+    border-radius:var(--r-btn);
+    position:relative;overflow:hidden;isolation:isolate;
+    transition:background .3s ease, transform .3s var(--ease);
     white-space:nowrap;
   }
-  .btn-primary{
-    background:var(--accent);
-    color:#fff;
-    box-shadow:var(--shadow-soft);
+  .btn::after{ /* odsjaj laka preko dugmeta */
+    content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:-1;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+    transform:skewX(-20deg);transition:left .7s var(--ease);
   }
-  .btn-primary:hover{
-    background:var(--accent-dark);
-    transform:translateY(-2px);
-    box-shadow:var(--shadow-hover);
-  }
-  .btn-outline{
-    background:transparent;
-    border-color:var(--accent);
-    color:var(--accent);
-  }
-  .btn-outline:hover{
-    background:var(--accent);
-    color:#fff;
-    transform:translateY(-2px);
-  }
-  .btn-light{
-    background:#fff;
-    color:var(--accent-dark);
-  }
-  .btn-light:hover{
-    background:var(--accent-soft);
-    transform:translateY(-2px);
-  }
+  .btn:hover{background:var(--walnut-dark);transform:translateY(-2px);}
+  .btn:hover::after{left:130%;}
+  .btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;}
+  .dark .btn{background:var(--walnut-lite);color:var(--espresso);}
+  .dark .btn:hover{background:var(--walnut-pale);}
+  .btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{outline:2px solid var(--walnut-lite);outline-offset:4px;}
+
+  .link-tel{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:16px;}
+  .link-tel svg{width:20px;height:20px;fill:none;stroke:var(--walnut);stroke-width:1.6;}
+  .link-tel span{border-bottom:1px solid var(--line-strong);padding-bottom:4px;transition:border-color .2s ease;}
+  .link-tel:hover span{border-color:var(--walnut);}
+
+  /* ---------- GORNJA TRAKA ---------- */
+  .topbar{background:var(--espresso);color:var(--on-dark-muted);font-size:12px;letter-spacing:0.04em;}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:24px;padding-top:12px;padding-bottom:12px;}
+  .topbar-l, .topbar-r{display:flex;gap:32px;align-items:center;}
+  .topbar a:hover{color:var(--on-dark);}
+  .topbar svg{width:16px;height:16px;fill:none;stroke:var(--walnut-lite);stroke-width:1.6;vertical-align:-4px;margin-right:8px;}
+  @media (max-width:900px){.topbar-l .hide-m{display:none;}}
+  @media (max-width:600px){.topbar{display:none;}}
 
   /* ---------- HEADER ---------- */
-  .site-header{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(251,249,246,0.98);
-    border-bottom:1px solid rgba(99,70,48,0.1);
-    transition:backdrop-filter .3s ease, box-shadow .3s ease;
-  }
-  .site-header.scrolled{
-    backdrop-filter:blur(14px);
-    background:rgba(251,249,246,0.85);
-    box-shadow:0 8px 24px -18px rgba(36,26,18,0.3);
-  }
-  .header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-top:16px;
-    padding-bottom:16px;
-    gap:24px;
-  }
-  .logo img{height:34px;width:auto;}
-  .nav-desktop{
-    display:flex;
-    gap:36px;
-    flex:1;
-    justify-content:center;
-  }
-  .nav-desktop a{
-    font-size:15px;
-    font-weight:600;
-    color:var(--text-muted);
-    transition:color .2s ease;
-  }
-  .nav-desktop a:hover{color:var(--accent);}
-  .nav-cta{flex-shrink:0;}
+  .site-header{position:sticky;top:0;z-index:100;background:rgba(247,243,237,0.96);border-bottom:1px solid transparent;transition:border-color .3s ease, background .3s ease;}
+  .site-header.scrolled{background:rgba(247,243,237,0.84);-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);border-color:var(--line);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-top:20px;padding-bottom:20px;}
+  .logo img{height:32px;width:auto;}
+  .nav{display:flex;gap:36px;}
+  .nav a{font-size:16px;font-weight:500;color:var(--text-muted);position:relative;padding-top:4px;padding-bottom:4px;transition:color .2s ease;}
+  .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--walnut);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);}
+  .nav a:hover{color:var(--text);}
+  .nav a:hover::after{transform:scaleX(1);}
+  .header-cta{padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;}
 
-  .hamburger{
-    display:none;
-    flex-direction:column;
-    justify-content:center;
-    gap:5px;
-    width:32px;
-    height:28px;
-    background:none;
-    border:none;
-    cursor:pointer;
-    padding:0;
-  }
-  .hamburger span{
-    display:block;
-    width:100%;
-    height:2px;
-    background:var(--text);
-    transition:transform .25s ease, opacity .25s ease;
-  }
-  .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .hamburger.active span:nth-child(2){opacity:0;}
-  .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .hamburger{display:none;width:44px;height:44px;position:relative;}
+  .hamburger span{position:absolute;left:8px;right:8px;height:2px;background:var(--text);transition:transform .3s var(--ease), opacity .2s ease;}
+  .hamburger span:nth-child(1){top:14px;}
+  .hamburger span:nth-child(2){top:21px;}
+  .hamburger span:nth-child(3){top:28px;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
   .mobile-menu{
-    display:none;
-    flex-direction:column;
-    gap:4px;
-    padding-left:24px;
-    padding-right:24px;
-    padding-bottom:20px;
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .3s ease;
+    position:fixed;left:0;right:0;top:72px;bottom:0;z-index:99;
+    background:var(--paper);
+    display:flex;flex-direction:column;
+    padding-top:24px;padding-bottom:32px;padding-left:20px;padding-right:20px;
+    transform:translateY(-8px);opacity:0;visibility:hidden;
+    transition:opacity .3s ease, transform .3s var(--ease), visibility 0s linear .3s;
   }
-  .mobile-menu.open{
-    display:flex;
-    max-height:400px;
-  }
-  .mobile-menu a{
-    padding-top:12px;
-    padding-bottom:12px;
-    font-size:16px;
-    font-weight:600;
-    color:var(--text);
-    border-bottom:1px solid rgba(99,70,48,0.08);
-  }
-  .mobile-menu .btn{margin-top:14px;width:100%;}
-
+  .mobile-menu.open{opacity:1;visibility:visible;transform:none;transition:opacity .3s ease, transform .3s var(--ease);}
+  .mobile-menu a.m-link{font-family:var(--head);font-size:32px;font-weight:500;padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline;}
+  .mobile-menu a.m-link span{font-family:var(--body);font-size:12px;color:var(--walnut);letter-spacing:0.12em;}
+  .mobile-menu .btn{margin-top:32px;}
   @media (max-width:991px){
-    .nav-desktop, .nav-cta{display:none;}
-    .hamburger{display:flex;}
+    .nav, .header-cta{display:none;}
+    .hamburger{display:block;}
   }
+  @media (min-width:992px){.mobile-menu{display:none;}}
 
   /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    min-height:88vh;
-    display:flex;
-    align-items:center;
-    background-image:
-      linear-gradient(120deg, rgba(36,20,10,0.82) 0%, rgba(36,20,10,0.55) 45%, rgba(36,20,10,0.25) 100%),
-      url('assets/Dizajn-enterijera-i-namestaja-i-kompletno-opremanje-za-moderan-stan-u-Beogradu-na-vodi-14.jpg');
-    background-size:cover;
-    background-position:center;
-    padding-top:64px;
-    padding-bottom:64px;
+  .hero{position:relative;padding-top:64px;padding-bottom:96px;overflow:hidden;}
+  .hero::before{ /* tlocrtna mreža, bledi ka dole */
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(var(--walnut-soft) 1px, transparent 1px), linear-gradient(90deg, var(--walnut-soft) 1px, transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image:linear-gradient(to bottom, #000 0%, transparent 80%);mask-image:linear-gradient(to bottom, #000 0%, transparent 80%);
   }
-  .hero-content{
-    max-width:640px;
-    color:#fff;
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1.08fr;gap:64px;align-items:center;}
+  .hero-text{container-type:inline-size;padding-top:32px;padding-bottom:32px;}
+  .hero h1{font-weight:500;line-height:0.96;margin-bottom:32px;font-size:clamp(48px, 7vw, 112px);font-size:clamp(48px, 23cqi, 136px);}
+  .hero h1 > span{display:block;white-space:nowrap;}
+  .hero h1 em{position:relative;display:inline-block;}
+  .hero h1 em::after{ /* kota ispod reči ID */
+    content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;
+    border-left:1px solid var(--walnut);border-right:1px solid var(--walnut);
+    background:linear-gradient(var(--walnut), var(--walnut)) center/100% 1px no-repeat;
+    opacity:0.5;
   }
-  .hero-eyebrow{
-    font-size:14px;
-    font-weight:700;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:#e0cdb8;
-    margin-bottom:20px;
-    display:block;
-  }
-  .hero h1{
-    font-size:clamp(38px, 6vw, 64px);
-    font-weight:700;
-    color:#fff;
-    margin-bottom:24px;
-  }
-  .hero p{
-    font-size:19px;
-    color:rgba(255,255,255,0.88);
-    max-width:520px;
-    margin-bottom:36px;
-  }
+  .hero-lead{font-size:20px;line-height:1.6;max-width:36ch;margin-bottom:40px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:32px;align-items:center;}
+  .hero-points{display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);}
+  .hero-points li{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;line-height:1.5;color:var(--text);}
+  .hero-points b{display:block;font-family:var(--head);font-size:32px;font-weight:400;letter-spacing:0;color:var(--walnut);line-height:1;margin-bottom:8px;}
 
-  /* ---------- BOL SECTION ---------- */
-  .bol{
-    background:var(--accent-soft);
-    padding-top:72px;
-    padding-bottom:72px;
+  /* kompozicija: ormar koji se otvori + druga fotografija + kartice */
+  .hero-art{position:relative;padding-bottom:64px;padding-left:48px;}
+  .cabinet{position:relative;aspect-ratio:4/4.4;perspective:2000px;}
+  .cabinet-photo{position:absolute;inset:0;overflow:hidden;border-radius:var(--r-card);background:var(--espresso-3);box-shadow:0 48px 96px -48px rgba(43,29,20,0.6);}
+  .cabinet-photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 2.4s var(--ease), filter 1.6s ease;}
+  .js .cabinet-photo img{filter:brightness(0.55) saturate(0.8);}
+  .cabinet.is-open .cabinet-photo img{transform:scale(1);filter:none;}
+  .cabinet-sheen{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:var(--r-card);z-index:2;}
+  .cabinet-sheen::after{
+    content:"";position:absolute;top:-20%;bottom:-20%;left:-50%;width:32%;
+    background:linear-gradient(90deg, transparent, rgba(255,246,232,0.10) 40%, rgba(255,246,232,0.22) 50%, rgba(255,246,232,0.10) 60%, transparent);
+    transform:skewX(-16deg);
+    animation:sheen 10s cubic-bezier(.45,.05,.3,1) 3.4s infinite;
   }
-  .bol .wrap{
-    max-width:820px;
-    text-align:center;
-  }
-  .bol p{
-    font-size:20px;
-    color:var(--text);
-    font-weight:400;
-    line-height:1.7;
-  }
-  .bol p + p{margin-top:16px;}
+  @keyframes sheen{0%{transform:skewX(-16deg) translateX(0);}24%,100%{transform:skewX(-16deg) translateX(560%);}}
 
-  /* ---------- SECTION HEADERS ---------- */
-  .section-head{
-    max-width:640px;
-    margin-bottom:56px;
+  .doors{position:absolute;inset:0;z-index:3;display:none;pointer-events:none;transform-style:preserve-3d;}
+  .js .doors{display:flex;}
+  .doors.done{display:none;}
+  .door{
+    position:relative;flex:1;
+    background-color:#6d4c33;
+    background-image:linear-gradient(100deg, rgba(255,240,220,0.10), rgba(0,0,0,0.12) 60%, rgba(0,0,0,0.24)), var(--grain);
+    background-size:100% 100%, 480px 960px;
+    box-shadow:inset 0 0 0 1px rgba(255,236,210,0.10), inset 0 -24px 48px -24px rgba(0,0,0,0.4);
+    overflow:hidden;
+    transition:transform 1.5s cubic-bezier(.5,0,.16,1), opacity .6s ease 1s;
+    will-change:transform;
   }
-  .section-head.center{
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
+  .door-l{transform-origin:left center;border-radius:var(--r-card) 0 0 var(--r-card);margin-right:2px;}
+  .door-r{transform-origin:right center;border-radius:0 var(--r-card) var(--r-card) 0;background-position:0 0, 240px 0;}
+  .door::before{ /* satenski odsjaj pre otvaranja */
+    content:"";position:absolute;top:-30%;bottom:-30%;left:-80%;width:60%;
+    background:linear-gradient(90deg, transparent, rgba(255,244,228,0.34), transparent);
+    transform:skewX(-14deg);
+    transition:left 1.1s var(--ease);
   }
-  .eyebrow{
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--accent);
-    margin-bottom:14px;
-    display:block;
+  .door-r::before{transition-delay:.12s;}
+  .door::after{ /* gola profil: urez za hvatanje */
+    content:"";position:absolute;top:32%;bottom:32%;width:4px;border-radius:4px;
+    background:linear-gradient(180deg, #e8d3b4, #9b7a54 50%, #e8d3b4);
+    box-shadow:0 0 12px rgba(232,211,180,0.4);
   }
-  .section-head h2{
-    font-size:clamp(30px, 4vw, 44px);
-    margin-bottom:16px;
-  }
-  .section-head p{
-    font-size:17px;
-    color:var(--text-muted);
-    max-width:480px;
-  }
-  .section-head.center p{margin-left:auto;margin-right:auto;}
+  .door-l::after{right:16px;}
+  .door-r::after{left:16px;}
+  .doors.is-armed .door::before{left:130%;}
+  .doors.is-open .door-l{transform:rotateY(-104deg);opacity:0;}
+  .doors.is-open .door-r{transform:rotateY(104deg);opacity:0;}
 
-  /* ---------- SERVICES ---------- */
-  .services-grid{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:24px;
+  .hero-photo-2{
+    position:absolute;left:0;bottom:0;width:40%;aspect-ratio:4/5;z-index:4;
+    border-radius:var(--r-card);overflow:hidden;
+    border:8px solid var(--paper);
+    box-shadow:0 32px 64px -32px rgba(43,29,20,0.55);
   }
-  .service-card{
-    background:#fff;
-    border:1px solid rgba(99,70,48,0.12);
-    border-radius:var(--radius-card);
-    padding:36px 28px;
-    transition:box-shadow .3s ease, transform .3s ease;
+  .hero-photo-2 img{width:100%;height:100%;object-fit:cover;}
+  .float-card{
+    position:absolute;z-index:5;
+    background:rgba(255,255,255,0.94);
+    border:1px solid var(--line);
+    border-radius:var(--r-card);
+    padding-top:16px;padding-bottom:16px;padding-left:20px;padding-right:20px;
+    box-shadow:0 24px 48px -28px rgba(43,29,20,0.45);
+    font-size:12px;line-height:1.5;
   }
-  .service-card:hover{
-    box-shadow:var(--shadow-soft);
-    transform:translateY(-4px);
+  .float-card b{display:block;font-family:var(--head);font-size:20px;font-weight:500;line-height:1.1;margin-bottom:4px;color:var(--text);}
+  .float-card span{color:var(--text-muted);}
+  .fc-project{right:-16px;bottom:96px;max-width:240px;}
+  .fc-project i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--walnut-lite);margin-right:8px;box-shadow:0 0 0 4px var(--walnut-glow);}
+  .fc-save{top:32px;left:0;max-width:220px;background:var(--espresso);border-color:var(--espresso);}
+  .fc-save b{color:var(--on-dark);}
+  .fc-save span{color:var(--on-dark-muted);}
+  .dim-v{
+    position:absolute;right:-32px;top:0;bottom:64px;width:12px;
+    border-top:1px solid var(--walnut-lite);border-bottom:1px solid var(--walnut-lite);
+    background:linear-gradient(var(--walnut-lite), var(--walnut-lite)) center/1px 100% no-repeat;
   }
-  .icon-box{
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    background:var(--accent-soft);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:20px;
-  }
-  .icon-box svg{width:26px;height:26px;stroke:var(--accent);}
-  .service-card h3{
-    font-size:22px;
-    margin-bottom:10px;
-  }
-  .service-card p{
-    font-size:15px;
-    color:var(--text-muted);
-    max-width:65ch;
-  }
+  .dim-v b{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);background:var(--paper);padding-left:8px;padding-right:8px;font-size:12px;font-weight:600;letter-spacing:0.12em;color:var(--walnut);white-space:nowrap;}
 
+  @media (max-width:1100px){.dim-v{display:none;}.fc-project{right:0;}}
   @media (max-width:991px){
-    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .hero .wrap{grid-template-columns:1fr;gap:48px;}
+    .hero-art{max-width:640px;}
   }
   @media (max-width:600px){
-    .services-grid{grid-template-columns:1fr;}
+    .hero{padding-top:32px;padding-bottom:64px;}
+    .hero-lead{font-size:16px;}
+    .hero-points{grid-template-columns:1fr;gap:16px;margin-top:40px;}
+    .hero-points li{display:flex;gap:16px;align-items:baseline;}
+    .hero-points b{font-size:24px;margin-bottom:0;min-width:40px;}
+    .hero-art{padding-left:24px;padding-bottom:48px;}
+    .fc-save{max-width:180px;top:16px;}
+    .fc-project{bottom:24px;max-width:188px;}
+    .door-l::after{right:8px;}
+    .door-r::after{left:8px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .js .doors{display:none;}
+    .js .cabinet-photo img{filter:none;transform:none;}
+    .cabinet-sheen::after{animation:none;display:none;}
   }
 
-  /* ---------- OFFICE STRIP ---------- */
-  .office-strip{
-    background:var(--bg-alt);
-  }
-  .office-inner{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:56px;
-    align-items:center;
-  }
-  .office-text h3{
-    font-size:30px;
-    margin-bottom:16px;
-  }
-  .office-text p{
-    font-size:16px;
-    color:var(--text-muted);
-    max-width:52ch;
-    margin-bottom:14px;
-  }
-  .office-photos{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-  }
-  .office-photos img{
-    width:100%;
-    height:150px;
-    object-fit:cover;
-    border-radius:var(--radius-img);
-  }
-  .office-photos img:first-child{
-    grid-column:1 / -1;
-    height:180px;
-  }
-  @media (max-width:768px){
-    .office-inner{grid-template-columns:1fr;gap:32px;}
-  }
+  /* ---------- MARQUEE ---------- */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--paper);}
+  .marquee-track{display:flex;width:max-content;animation:marquee 48s linear infinite;}
+  .marquee-track span{font-family:var(--head);font-size:32px;font-weight:400;padding-top:20px;padding-bottom:20px;padding-right:48px;white-space:nowrap;color:var(--text-muted);display:flex;align-items:center;gap:48px;}
+  .marquee-track span::after{content:"";width:8px;height:8px;border:1px solid var(--walnut-lite);transform:rotate(45deg);}
+  @keyframes marquee{to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
 
-  /* ---------- KAKO RADIMO ---------- */
-  .approach-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-  }
-  .approach-card{
-    padding:36px 30px;
-    border-radius:var(--radius-card);
-    background:var(--white);
-    border:1px solid rgba(99,70,48,0.12);
-    position:relative;
-    overflow:hidden;
-  }
-  .approach-card::before{
-    content:'';
-    position:absolute;
-    top:-60px;
-    right:-60px;
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    background:radial-gradient(circle, var(--accent-glow), transparent 70%);
-  }
-  .approach-num{
-    font-family:'Khand', sans-serif;
-    font-size:44px;
-    font-weight:700;
-    color:var(--accent-soft-2);
-    margin-bottom:12px;
-  }
-  .approach-card h3{
-    font-size:23px;
-    margin-bottom:12px;
-    position:relative;
-  }
-  .approach-card p{
-    font-size:15px;
-    color:var(--text-muted);
-    position:relative;
-    max-width:65ch;
-  }
-  @media (max-width:900px){
-    .approach-grid{grid-template-columns:1fr;}
-  }
-
-  /* ---------- PORTFOLIO ---------- */
-  .portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-  }
-  .portfolio-item{
-    border-radius:var(--radius-card);
-    overflow:hidden;
-    position:relative;
-    background:#fff;
-    border:1px solid rgba(99,70,48,0.1);
-    transition:box-shadow .3s ease, transform .3s ease;
-  }
-  .portfolio-item:hover{
-    transform:translateY(-4px);
-    box-shadow:var(--shadow-soft);
-  }
-  .portfolio-item img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-  }
-  .portfolio-caption{
-    padding:16px 18px;
-  }
-  .portfolio-caption span{
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--accent);
-    display:block;
-    margin-bottom:6px;
-  }
-  .portfolio-caption p{
-    font-size:14px;
-    color:var(--text-muted);
-  }
+  /* ---------- 01 ZVUČI POZNATO ---------- */
+  .pain-grid{display:grid;grid-template-columns:repeat(4, 1fr);border-top:1px solid var(--line);}
+  .pain{padding-top:32px;padding-bottom:32px;padding-right:32px;border-right:1px solid var(--line);}
+  .pain + .pain{padding-left:32px;}
+  .pain:last-child{border-right:0;}
+  .pain i{display:block;font-style:normal;font-family:var(--head);font-size:64px;line-height:0.8;color:var(--walnut-pale);margin-bottom:24px;}
+  .pain h3{font-size:24px;margin-bottom:12px;}
+  .pain p{font-size:16px;}
+  .pain-answer{margin-top:64px;display:flex;gap:32px;align-items:center;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-card);}
+  .pain-answer p{font-family:var(--head);font-size:28px;line-height:1.2;color:var(--text);max-width:none;flex:1;}
   @media (max-width:991px){
-    .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+    .pain-grid{grid-template-columns:1fr 1fr;}
+    .pain{border-bottom:1px solid var(--line);}
+    .pain:nth-child(2){border-right:0;}
+    .pain:nth-child(3){padding-left:0;}
   }
   @media (max-width:600px){
-    .portfolio-grid{grid-template-columns:1fr;}
+    .pain-grid{grid-template-columns:1fr;}
+    .pain, .pain + .pain{padding-left:0;padding-right:0;border-right:0;}
+    .pain-answer{flex-direction:column;align-items:flex-start;padding-left:24px;padding-right:24px;}
+    .pain-answer p{font-size:24px;}
   }
 
-  .portfolio-cta{
-    text-align:center;
-    margin-top:48px;
-  }
+  /* ---------- 02 TRI NAČINA ---------- */
+  .pkg-tabs{display:grid;grid-template-columns:repeat(3, 1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-card) var(--r-card) 0 0;overflow:hidden;background:var(--white);}
+  .pkg-tab{text-align:left;padding-top:24px;padding-bottom:24px;padding-left:28px;padding-right:28px;border-right:1px solid var(--line);position:relative;transition:background .3s ease;}
+  .pkg-tab:last-child{border-right:0;}
+  .pkg-tab::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--walnut);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);}
+  .pkg-tab[aria-selected="true"]{background:var(--paper);}
+  .pkg-tab[aria-selected="true"]::after{transform:scaleX(1);}
+  .pkg-tab small{display:block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--walnut);margin-bottom:8px;}
+  .pkg-tab strong{display:block;font-family:var(--head);font-size:28px;font-weight:500;line-height:1.1;margin-bottom:4px;}
+  .pkg-tab span{font-size:12px;color:var(--text-muted);line-height:1.5;display:block;}
+  .pkg-tab:hover{background:var(--paper);}
 
-  /* ---------- O BRENDU ---------- */
-  .about-section{
-    background:var(--bg-alt);
+  .pkg{display:grid;grid-template-columns:0.8fr 1.2fr;border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r-card) var(--r-card);overflow:hidden;background:var(--white);}
+  .pkg-media{position:relative;min-height:480px;background:var(--espresso-3);}
+  .pkg-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s ease;}
+  .pkg-media img[hidden]{display:block;opacity:0;}
+  .pkg-body{padding-top:48px;padding-bottom:48px;padding-left:48px;padding-right:48px;}
+  .pkg-quote{font-family:var(--head);font-size:32px;line-height:1.15;color:var(--text);margin-bottom:16px;}
+  .pkg-desc{margin-bottom:32px;}
+  .pkg-list{display:grid;grid-template-columns:1fr 1fr;column-gap:32px;}
+  .pkg-list li{display:flex;gap:12px;align-items:flex-start;padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.4;transition:color .3s ease, opacity .3s ease;}
+  .pkg-list li::before{
+    content:"";flex:0 0 20px;height:20px;margin-top:0;border-radius:50%;
+    background:var(--walnut) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.5L14 7.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat;
+    transition:background-color .3s ease;
   }
-  .about-inner{
-    display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:64px;
-    align-items:center;
+  .pkg[data-pkg="z"] .pkg-list li::before{background-color:var(--walnut-lite);}
+  .pkg[data-pkg="b"] .pkg-list li[data-b="0"]{color:var(--text-faint);text-decoration:line-through;text-decoration-color:var(--line-strong);}
+  .pkg[data-pkg="b"] .pkg-list li[data-b="0"]::before{background:transparent;box-shadow:inset 0 0 0 1px var(--line-strong);}
+  .pkg-legend{display:flex;flex-wrap:wrap;gap:24px;margin-top:24px;font-size:12px;color:var(--text-muted);line-height:1.5;}
+  .pkg-note{margin-top:24px;padding-top:16px;padding-bottom:16px;padding-left:20px;padding-right:20px;background:var(--paper);border-left:2px solid var(--walnut);font-size:12px;line-height:1.6;color:var(--text-muted);max-width:none;}
+  .pkg-anim{animation:panelIn .5s var(--ease);}
+  @keyframes panelIn{from{opacity:0.3;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  @media (max-width:991px){
+    .pkg{grid-template-columns:1fr;}
+    .pkg-media{min-height:280px;}
+    .pkg-body{padding-left:32px;padding-right:32px;padding-top:32px;padding-bottom:32px;}
   }
-  .about-text h2{
-    font-size:clamp(28px,4vw,40px);
-    margin-bottom:20px;
+  @media (max-width:700px){
+    .pkg-tabs{grid-template-columns:1fr;}
+    .pkg-tab{border-right:0;border-bottom:1px solid var(--line);padding-top:16px;padding-bottom:16px;}
+    .pkg-tab span{display:none;}
+    .pkg-list{grid-template-columns:1fr;}
+    .pkg-body{padding-left:20px;padding-right:20px;}
+    .pkg-quote{font-size:28px;}
   }
-  .about-text p{
-    font-size:16px;
-    color:var(--text-muted);
-    max-width:56ch;
-    margin-bottom:16px;
-  }
-  .about-traits{
-    display:flex;
-    gap:28px;
-    margin-top:28px;
-    flex-wrap:wrap;
-  }
-  .trait{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:700;
-    font-size:14px;
-    color:var(--accent-dark);
-  }
-  .trait svg{width:20px;height:20px;stroke:var(--accent);}
+  @media (prefers-reduced-motion:reduce){.pkg-anim{animation:none;}}
 
-  .about-media{
-    background:#fff;
-    border-radius:var(--radius-card);
-    overflow:hidden;
-    border:1px solid rgba(99,70,48,0.12);
-  }
-  .about-media img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-  }
-  .about-media-caption{
-    padding:20px 24px;
-  }
-  .about-media-caption span{
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--accent);
-    display:block;
-    margin-bottom:6px;
-  }
-  .about-media-caption p{
-    font-size:14px;
-    color:var(--text-muted);
-  }
+  /* ---------- 03 NAMEŠTAJ PO MERI: ormar sa frontovima ---------- */
+  .furn{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;}
+  .furn-text h2{margin-bottom:24px;}
+  .furn-text > p{margin-bottom:40px;}
+  .furn-cats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
+  .furn-cats li{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;border:1px solid var(--dark-line-strong);border-radius:999px;color:var(--on-dark);}
+  .furn-services{display:grid;gap:0;border-top:1px solid var(--dark-line);}
+  .furn-services li{padding-top:24px;padding-bottom:24px;border-bottom:1px solid var(--dark-line);display:grid;grid-template-columns:48px 1fr;gap:16px;}
+  .furn-services i{font-style:normal;font-family:var(--head);font-size:24px;color:var(--walnut-lite);line-height:1.2;}
+  .furn-services h3{font-size:24px;margin-bottom:8px;}
+  .furn-services p{font-size:16px;}
 
-  @media (max-width:900px){
-    .about-inner{grid-template-columns:1fr;gap:36px;}
-  }
-
-  /* ---------- CTA / KONTAKT ---------- */
-  .contact-section{
-    background:var(--accent-dark);
-    color:#fff;
+  .wardrobe-wrap{position:relative;}
+  .wardrobe{
+    --wood:#6d4c33;--grain-o:1;
     position:relative;
+    aspect-ratio:1.18/1;
+    padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px;
+    background:linear-gradient(180deg, #2a1f17, #1a130d);
+    border-radius:var(--r-card);
+    box-shadow:0 64px 96px -48px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,236,210,0.06);
+    display:grid;grid-template-columns:repeat(3, 1fr);gap:4px;
+    perspective:1600px;
+  }
+  .wardrobe::after{ /* senka ispod, pod */
+    content:"";position:absolute;left:4%;right:4%;bottom:-24px;height:24px;
+    background:radial-gradient(50% 100% at 50% 0, rgba(0,0,0,0.55), transparent);
+    filter:blur(4px);
+  }
+  .bay{position:relative;background:linear-gradient(180deg, #120d09, #221a13);overflow:visible;transform-style:preserve-3d;}
+  .bay-in{position:absolute;inset:0;overflow:hidden;}
+  .bay-in::before{ /* LED traka pod plafonom elementa */
+    content:"";position:absolute;left:8px;right:8px;top:8px;height:4px;border-radius:4px;
+    background:#fff3dc;opacity:0.15;transition:opacity .6s ease, box-shadow .6s ease;
+  }
+  .bay.open .bay-in::before{opacity:1;box-shadow:0 0 16px 4px rgba(255,220,170,0.7), 0 40px 80px 24px rgba(255,210,150,0.18);}
+  .shelf{position:absolute;left:0;right:0;height:8px;background:var(--wood);background-image:linear-gradient(180deg, rgba(255,255,255,0.14), rgba(0,0,0,0.2));transition:background-color .6s ease;}
+  .obj{position:absolute;bottom:100%;border-radius:2px 2px 0 0;}
+  .rod{position:absolute;left:12%;right:12%;top:20%;height:4px;border-radius:4px;background:linear-gradient(180deg, #d7c0a0, #7c6245);}
+  .hanger{position:absolute;top:calc(20% + 4px);width:14%;height:48%;border-radius:4px 4px 2px 2px;}
+
+  .front{
+    position:absolute;inset:0;z-index:2;
+    background-color:var(--wood);
+    background-image:linear-gradient(100deg, rgba(255,244,228,0.12), rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.2));
+    transform-origin:left center;
+    transition:transform 1s cubic-bezier(.5,0,.16,1), background-color .6s ease, box-shadow .6s ease;
+    box-shadow:inset 0 0 0 1px rgba(255,236,210,0.10);
     overflow:hidden;
+    cursor:pointer;
+    border-radius:2px;
   }
-  .contact-section::before{
-    content:'';
-    position:absolute;
-    top:-140px;
-    left:50%;
-    transform:translateX(-50%);
-    width:600px;
-    height:600px;
-    border-radius:50%;
-    background:radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
-    pointer-events:none;
+  .front::before{ /* godovi */
+    content:"";position:absolute;inset:0;background-image:var(--grain);background-size:480px 960px;opacity:var(--grain-o);transition:opacity .6s ease;
   }
-  .contact-inner{
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:64px;
-    position:relative;
+  .bay:nth-child(2) .front::before{background-position:160px 0;}
+  .bay:nth-child(3) .front::before{background-position:320px 0;}
+  .front::after{ /* odsjaj pri promeni materijala */
+    content:"";position:absolute;top:-30%;bottom:-30%;left:-90%;width:60%;
+    background:linear-gradient(90deg, transparent, rgba(255,250,240,0.38), transparent);
+    transform:skewX(-14deg);
   }
-  .contact-info .eyebrow{color:#e0cdb8;}
-  .contact-info h2{
-    color:#fff;
-    font-size:clamp(30px,4vw,42px);
-    margin-bottom:18px;
+  .wardrobe.flash .front::after{animation:frontSheen 1.1s var(--ease);}
+  .wardrobe.flash .bay:nth-child(2) .front::after{animation-delay:.08s;}
+  .wardrobe.flash .bay:nth-child(3) .front::after{animation-delay:.16s;}
+  @keyframes frontSheen{from{left:-90%;}to{left:140%;}}
+  .front .pull{position:absolute;right:12px;top:40%;width:4px;height:20%;border-radius:4px;background:linear-gradient(180deg, #e8d3b4, #8e6f4c 50%, #e8d3b4);box-shadow:0 0 8px rgba(0,0,0,0.3);}
+  .bay:nth-child(3) .front{transform-origin:right center;}
+  .bay:nth-child(3) .front .pull{right:auto;left:12px;}
+  .bay.open .front{transform:rotateY(-72deg);box-shadow:inset 0 0 0 1px rgba(255,236,210,0.1), 24px 0 48px rgba(0,0,0,0.45);}
+  .bay:nth-child(3).open .front{transform:rotateY(72deg);box-shadow:inset 0 0 0 1px rgba(255,236,210,0.1), -24px 0 48px rgba(0,0,0,0.45);}
+  .front:hover{box-shadow:inset 0 0 0 1px rgba(255,236,210,0.24);}
+
+  .swatches{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:48px;}
+  .swatches-label{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-dark-faint);margin-right:8px;}
+  .sw{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--on-dark-muted);padding-top:4px;padding-bottom:4px;padding-left:4px;padding-right:12px;border-radius:999px;border:1px solid transparent;transition:border-color .3s ease, color .3s ease;}
+  .sw i{width:28px;height:28px;border-radius:50%;background-color:var(--c);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.18);position:relative;overflow:hidden;}
+  .sw i.gr::after{content:"";position:absolute;inset:0;background-image:var(--grain);background-size:120px 240px;}
+  .sw[aria-pressed="true"]{border-color:var(--dark-line-strong);color:var(--on-dark);}
+  .sw:hover{color:var(--on-dark);}
+  .wardrobe-hint{margin-top:16px;font-size:12px;color:var(--on-dark-faint);max-width:none;}
+  @media (max-width:991px){.furn{grid-template-columns:1fr;gap:64px;}}
+  @media (max-width:600px){.swatches{gap:8px;}.swatches-label{width:100%;}.wardrobe{padding-top:8px;padding-bottom:8px;padding-left:8px;padding-right:8px;}}
+  @media (prefers-reduced-motion:reduce){.front{transition:background-color .01s;}.wardrobe.flash .front::after{animation:none;}}
+
+  /* ---------- 04 CRTEŽ → STAN ---------- */
+  .compare{position:relative;aspect-ratio:16/9;border-radius:var(--r-card);overflow:hidden;background:var(--paper-2);user-select:none;--p:50%;}
+  .compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;}
+  .compare-sketch{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0);background:#f4ede2;}
+  .compare-sketch img{filter:url(#sketch);mix-blend-mode:multiply;opacity:0.92;}
+  .compare-sketch::after{ /* milimetarski papir */
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(99,70,48,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(99,70,48,0.08) 1px, transparent 1px);
+    background-size:24px 24px;
   }
-  .contact-info p{
-    color:rgba(255,255,255,0.78);
-    max-width:48ch;
-    margin-bottom:36px;
-    font-size:16px;
+  .compare-line{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:var(--white);box-shadow:0 0 16px rgba(0,0,0,0.3);pointer-events:none;}
+  .compare-knob{position:absolute;top:50%;left:50%;width:56px;height:56px;margin-left:-28px;margin-top:-28px;border-radius:50%;background:var(--white);box-shadow:0 8px 24px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;}
+  .compare-knob svg{width:28px;height:28px;fill:none;stroke:var(--walnut);stroke-width:1.8;}
+  .compare-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;}
+  .compare-lab{position:absolute;top:24px;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border-radius:var(--r-btn);pointer-events:none;}
+  .compare-lab.l{left:24px;background:var(--white);color:var(--walnut);}
+  .compare-lab.r{right:24px;background:rgba(24,17,12,0.72);color:#fff;}
+  .compare-cap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:24px;font-size:12px;color:var(--text-muted);}
+  .compare-cap b{color:var(--text);font-weight:600;}
+  .deliver{display:grid;grid-template-columns:repeat(5, 1fr);gap:0;margin-top:64px;border-top:1px solid var(--line);}
+  .deliver li{padding-top:24px;padding-right:24px;border-right:1px solid var(--line);}
+  .deliver li + li{padding-left:24px;}
+  .deliver li:last-child{border-right:0;}
+  .deliver svg{width:32px;height:32px;fill:none;stroke:var(--walnut);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:16px;}
+  .deliver b{display:block;font-family:var(--head);font-size:24px;font-weight:500;line-height:1.1;margin-bottom:8px;}
+  .deliver span{font-size:12px;line-height:1.6;color:var(--text-muted);display:block;}
+  @media (max-width:991px){
+    .compare{aspect-ratio:4/3;}
+    .deliver{grid-template-columns:1fr 1fr;}
+    .deliver li, .deliver li + li{padding-left:0;padding-right:24px;border-right:0;padding-bottom:24px;border-bottom:1px solid var(--line);}
   }
-  .contact-detail{
-    display:flex;
-    gap:16px;
-    align-items:flex-start;
-    margin-bottom:22px;
+  @media (max-width:600px){.compare-lab{top:12px;}.compare-lab.l{left:12px;}.compare-lab.r{right:12px;}.deliver{grid-template-columns:1fr;}}
+
+  /* ---------- 05 KONCEPTI ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;}
+  .filters button{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;border:1px solid var(--line-strong);border-radius:999px;transition:background .3s ease, color .3s ease, border-color .3s ease;}
+  .filters button[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--paper);}
+  .filters button:hover{border-color:var(--text);}
+  .works{display:grid;grid-template-columns:repeat(4, 1fr);grid-auto-rows:240px;grid-auto-flow:dense;gap:16px;}
+  .work{position:relative;overflow:hidden;border-radius:var(--r-card);background:var(--espresso-3);isolation:isolate;}
+  .work.w2{grid-column:span 2;}
+  .work.h2{grid-row:span 2;}
+  .work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+  .work::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top, rgba(24,17,12,0.86) 0%, rgba(24,17,12,0.2) 44%, transparent 64%);}
+  .work::after{ /* odsjaj preko fotografije na hover */
+    content:"";position:absolute;top:-20%;bottom:-20%;left:-70%;width:40%;z-index:2;
+    background:linear-gradient(90deg, transparent, rgba(255,246,232,0.22), transparent);
+    transform:skewX(-16deg);transition:left 1s var(--ease);
   }
-  .contact-detail svg{
-    width:22px;
-    height:22px;
-    stroke:#e0cdb8;
-    flex-shrink:0;
-    margin-top:2px;
-  }
-  .contact-detail strong{
-    display:block;
-    font-size:15px;
-    font-weight:700;
-    margin-bottom:2px;
-  }
-  .contact-detail span{
-    font-size:15px;
-    color:rgba(255,255,255,0.75);
+  .work:hover img{transform:scale(1.05);}
+  .work:hover::after{left:140%;}
+  .work figcaption{position:absolute;left:24px;right:24px;bottom:20px;z-index:3;color:#fff;}
+  .work figcaption small{display:block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--walnut-pale);margin-bottom:4px;}
+  .work figcaption b{display:block;font-family:var(--head);font-size:24px;font-weight:500;line-height:1.1;}
+  .work.w2.h2 figcaption b{font-size:32px;}
+  .works[data-f="kuhinje"] .work:not([data-cat~="kuhinje"]),
+  .works[data-f="stanovi"] .work:not([data-cat~="stanovi"]){display:none;}
+  .works[data-f] .work{animation:panelIn .5s var(--ease);}
+  @media (max-width:991px){.works{grid-template-columns:repeat(2, 1fr);grid-auto-rows:220px;}}
+  @media (max-width:600px){
+    .works{grid-template-columns:1fr;grid-auto-rows:260px;}
+    .work.w2{grid-column:auto;}
+    .work.h2{grid-row:auto;}
   }
 
-  .contact-form{
-    background:#fff;
-    border-radius:var(--radius-card);
-    padding:40px;
-    color:var(--text);
-  }
-  .contact-form h3{
-    font-size:24px;
-    margin-bottom:6px;
-  }
-  .contact-form > p{
-    font-size:14px;
-    color:var(--text-muted);
-    margin-bottom:28px;
-  }
-  .form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-    margin-bottom:16px;
-  }
-  .form-group{margin-bottom:16px;}
-  .form-group label{
-    display:block;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:6px;
-    color:var(--text);
-  }
-  .form-group input,
-  .form-group select,
-  .form-group textarea{
-    width:100%;
-    padding:13px 16px;
-    border:1px solid rgba(99,70,48,0.25);
-    border-radius:var(--radius-btn);
-    font-family:'Open Sans', sans-serif;
-    font-size:15px;
-    color:var(--text);
-    background:var(--bg);
-    transition:border-color .2s ease;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus{
-    outline:none;
-    border-color:var(--accent);
-  }
-  .form-group textarea{resize:vertical;min-height:100px;}
-  .contact-form .btn{width:100%;margin-top:6px;}
+  /* ---------- 06 PROCES ---------- */
+  .proc{display:grid;grid-template-columns:0.85fr 1.15fr;gap:80px;align-items:start;}
+  .proc-media{position:sticky;top:120px;}
+  .proc-media figure{border-radius:var(--r-card);overflow:hidden;aspect-ratio:4/5;background:var(--espresso-3);}
+  .proc-media img{width:100%;height:100%;object-fit:cover;}
+  .proc-media .tip{margin-top:24px;padding-top:20px;padding-bottom:20px;padding-left:24px;padding-right:24px;border:1px solid var(--dark-line-strong);border-radius:var(--r-card);}
+  .proc-media .tip b{display:block;font-family:var(--head);font-size:20px;font-weight:500;margin-bottom:4px;}
+  .proc-media .tip p{font-size:12px;line-height:1.6;}
+  .steps{counter-reset:s;}
+  .step{display:grid;grid-template-columns:72px 1fr;gap:24px;padding-top:32px;padding-bottom:32px;border-bottom:1px solid var(--dark-line);position:relative;}
+  .step:first-child{border-top:1px solid var(--dark-line);}
+  .step-n{font-family:var(--head);font-size:48px;font-weight:300;line-height:0.9;color:var(--walnut-lite);transition:color .4s ease;}
+  .step h3{font-size:28px;margin-bottom:8px;}
+  .step p{font-size:16px;}
+  .step::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--walnut-lite);transition:width 1.2s var(--ease);}
+  .step.is-visible::before{width:100%;}
+  .step .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .step .chips li{font-size:12px;padding-top:4px;padding-bottom:4px;padding-left:12px;padding-right:12px;border-radius:999px;background:rgba(176,138,100,0.14);color:var(--walnut-pale);}
+  @media (max-width:991px){.proc{grid-template-columns:1fr;gap:48px;}.proc-media{position:static;}.proc-media figure{aspect-ratio:16/10;}}
+  @media (max-width:600px){.step{grid-template-columns:48px 1fr;gap:16px;}.step-n{font-size:40px;}.step h3{font-size:24px;}}
 
-  @media (max-width:900px){
-    .contact-inner{grid-template-columns:1fr;gap:40px;}
-  }
-  @media (max-width:560px){
-    .form-row{grid-template-columns:1fr;}
-    .contact-form{padding:28px;}
-  }
+  /* ---------- 07 ZAŠTO ---------- */
+  .why{display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;}
+  .why-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-card);padding-top:32px;padding-bottom:32px;padding-left:28px;padding-right:28px;position:relative;overflow:hidden;transition:transform .4s var(--ease), box-shadow .4s ease;}
+  .why-card:hover{transform:translateY(-4px);box-shadow:0 32px 64px -40px rgba(43,29,20,0.5);}
+  .why-card svg{width:40px;height:40px;fill:none;stroke:var(--walnut);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;margin-bottom:32px;}
+  .why-card h3{font-size:24px;margin-bottom:12px;}
+  .why-card p{font-size:16px;}
+  .why-card.accent{background:var(--walnut);border-color:var(--walnut);color:#fff;}
+  .why-card.accent p{color:rgba(255,255,255,0.78);}
+  .why-card.accent svg{stroke:var(--walnut-pale);}
+  .why-card.accent::after{content:"";position:absolute;inset:0;background-image:var(--grain);background-size:480px 960px;opacity:0.5;pointer-events:none;}
+  @media (max-width:991px){.why{grid-template-columns:1fr 1fr;}}
+  @media (max-width:600px){.why{grid-template-columns:1fr;}}
 
-  /* ---------- FOOTER ---------- */
-  .site-footer{
-    background:var(--bg-alt);
-    padding-top:56px;
-    padding-bottom:32px;
-    border-top:1px solid rgba(99,70,48,0.12);
-  }
-  .footer-inner{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:32px;
-    padding-bottom:32px;
-    border-bottom:1px solid rgba(99,70,48,0.12);
-    margin-bottom:24px;
-  }
-  .footer-col h4{
-    font-size:15px;
-    font-weight:700;
-    margin-bottom:16px;
-    color:var(--accent-dark);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-  }
-  .footer-col a, .footer-col span{
-    display:block;
-    font-size:14px;
-    color:var(--text-muted);
-    margin-bottom:10px;
-  }
-  .footer-col a:hover{color:var(--accent);}
-  .footer-logo img{height:30px;margin-bottom:14px;}
-  .footer-logo p{
-    font-size:14px;
-    color:var(--text-muted);
-    max-width:38ch;
-  }
-  .footer-bottom{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:12px;
-    font-size:13px;
-    color:var(--text-faint);
-  }
+  /* ---------- 08 POSLOVNI PROSTOR ---------- */
+  .office{display:grid;grid-template-columns:repeat(12, 1fr);gap:16px;}
+  .office-text{grid-column:1 / span 5;align-self:center;padding-right:32px;}
+  .office-text h2{margin-bottom:24px;}
+  .office-text p + p{margin-top:16px;}
+  .office-tiles{grid-column:6 / span 7;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:280px 200px;gap:16px;}
+  .tile{position:relative;overflow:hidden;border-radius:var(--r-card);background:var(--paper-2);}
+  .tile:first-child{grid-column:1 / -1;}
+  .tile img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+  .tile:hover img{transform:scale(1.04);}
+  .tile span{position:absolute;left:16px;bottom:16px;background:var(--white);font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border-radius:var(--r-btn);}
+  @media (max-width:991px){.office-text, .office-tiles{grid-column:1 / -1;}.office-text{padding-right:0;margin-bottom:32px;}}
+  @media (max-width:600px){.office-tiles{grid-template-rows:200px 160px;}}
 
-  /* ---------- REVEAL ---------- */
-  .reveal{
-    opacity:1;
-    transform:translateY(14px);
-    transition:transform .6s ease, opacity .6s ease;
-  }
-  .reveal.is-visible{
-    transform:translateY(0);
-  }
+  /* ---------- 09 O STUDIJU ---------- */
+  .about{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center;}
+  .about-quote{font-family:var(--head);font-weight:400;font-size:clamp(32px, 4vw, 52px);line-height:1.08;color:var(--text);margin-bottom:32px;max-width:none;}
+  .about-quote em{white-space:nowrap;}
+  .about-text p{margin-bottom:16px;}
+  .team{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;}
+  .team li{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;border:1px solid var(--line-strong);border-radius:999px;}
+  .press{background:var(--white);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;}
+  .press-head{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;padding-left:24px;padding-right:24px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--walnut);}
+  .press-head span:last-child{color:var(--text-faint);}
+  .press-body{display:grid;grid-template-columns:160px 1fr;gap:24px;padding-top:24px;padding-bottom:24px;padding-left:24px;padding-right:24px;align-items:center;}
+  .press-body img{width:160px;height:108px;object-fit:cover;border-radius:4px;}
+  .press-body b{display:block;font-family:var(--head);font-size:24px;font-weight:500;line-height:1.1;margin-bottom:8px;}
+  .press-body p{font-size:16px;line-height:1.6;}
+  .facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);}
+  .facts div{padding-top:24px;padding-bottom:24px;padding-left:24px;padding-right:24px;}
+  .facts div + div{border-left:1px solid var(--line);}
+  .facts b{display:block;font-family:var(--head);font-size:48px;font-weight:400;line-height:1;color:var(--walnut);margin-bottom:4px;}
+  .facts span{display:block;font-size:12px;line-height:1.5;color:var(--text-muted);}
+  @media (max-width:991px){.about{grid-template-columns:1fr;gap:48px;}}
+  @media (max-width:500px){.press-body{grid-template-columns:1fr;}.press-body img{width:100%;height:auto;aspect-ratio:3/2;}}
 
-  /* ---------- MISC RESPONSIVE ---------- */
-  @media (max-width:768px){
-    section{padding-top:64px;padding-bottom:64px;}
-    .hero{min-height:auto;padding-top:100px;padding-bottom:80px;}
-    .hero h1{font-size:clamp(32px,8vw,44px);}
-    .hero p{font-size:17px;}
-    .bol p{font-size:17px;}
+  /* ---------- 10 FAQ ---------- */
+  .faq-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:80px;align-items:start;}
+  .faq-grid .head{display:block;margin-bottom:0;}
+  .faq-grid .head h2{margin-bottom:24px;}
+  .faq-grid .head p{margin-bottom:32px;}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq details:first-child{border-top:1px solid var(--line);}
+  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:24px;padding-bottom:24px;font-family:var(--head);font-size:24px;font-weight:500;line-height:1.2;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary i{flex:0 0 32px;height:32px;border-radius:50%;border:1px solid var(--line-strong);position:relative;transition:transform .4s var(--ease), background .3s ease;}
+  .faq summary i::before, .faq summary i::after{content:"";position:absolute;left:calc(50% - 6px);top:50%;width:12px;height:1px;background:var(--text);}
+  .faq summary i::after{transform:rotate(90deg);transition:transform .4s var(--ease);}
+  .faq details[open] summary i{background:var(--walnut);border-color:var(--walnut);}
+  .faq details[open] summary i::before, .faq details[open] summary i::after{background:#fff;}
+  .faq details[open] summary i::after{transform:rotate(0);}
+  .faq details p{padding-bottom:24px;font-size:16px;}
+  @media (max-width:991px){.faq-grid{grid-template-columns:1fr;gap:48px;}}
+  @media (max-width:600px){.faq summary{font-size:20px;}}
+
+  /* ---------- 11 KONTAKT ---------- */
+  .contact{display:grid;grid-template-columns:0.85fr 1.15fr;gap:80px;}
+  .contact-info h2{margin-bottom:24px;}
+  .contact-info > p{margin-bottom:48px;}
+  .c-list{border-top:1px solid var(--dark-line);}
+  .c-item{display:grid;grid-template-columns:40px 1fr;gap:16px;padding-top:20px;padding-bottom:20px;border-bottom:1px solid var(--dark-line);align-items:center;}
+  .c-item svg{width:24px;height:24px;fill:none;stroke:var(--walnut-lite);stroke-width:1.5;}
+  .c-item small{display:block;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-dark-faint);}
+  .c-item a, .c-item span{font-size:20px;font-family:var(--head);font-weight:500;color:var(--on-dark);}
+  .c-item a:hover{color:var(--walnut-pale);}
+  .map{margin-top:32px;border-radius:var(--r-card);overflow:hidden;height:240px;background:var(--espresso-3);border:1px solid var(--dark-line);}
+  .map iframe{width:100%;height:100%;border:0;filter:grayscale(1) sepia(0.35) brightness(0.8) contrast(1.1);}
+
+  .form{background:var(--paper);color:var(--text);border-radius:var(--r-card);padding-top:48px;padding-bottom:48px;padding-left:48px;padding-right:48px;}
+  .form h3{font-size:32px;margin-bottom:8px;}
+  .form > p{font-size:16px;margin-bottom:32px;}
+  .f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .f-row.three{grid-template-columns:1.4fr 1fr 1fr;}
+  .f{margin-bottom:20px;}
+  .f label{display:block;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;color:var(--text);}
+  .f input, .f select, .f textarea{
+    width:100%;font-family:var(--body);font-size:16px;color:var(--text);
+    background:var(--white);border:1px solid var(--line-strong);border-radius:var(--r-btn);
+    padding-top:12px;padding-bottom:12px;padding-left:16px;padding-right:16px;
+    transition:border-color .2s ease, box-shadow .2s ease;
   }
-  @media (max-width:480px){
-    .wrap{padding-left:20px;padding-right:20px;}
-  }
+  .f input:focus, .f select:focus, .f textarea:focus{outline:none;border-color:var(--walnut);box-shadow:0 0 0 4px var(--walnut-soft);}
+  .f textarea{min-height:120px;resize:vertical;}
+  .service-pick{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;border:0;}
+  .service-pick legend{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;width:100%;}
+  .service-pick label{position:relative;cursor:pointer;}
+  .service-pick input{position:absolute;opacity:0;width:1px;height:1px;}
+  .service-pick span{display:inline-block;font-size:12px;font-weight:600;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;border:1px solid var(--line-strong);border-radius:999px;background:var(--white);transition:background .25s ease, color .25s ease, border-color .25s ease;}
+  .service-pick input:checked + span{background:var(--walnut);border-color:var(--walnut);color:#fff;}
+  .service-pick input:focus-visible + span{outline:2px solid var(--walnut-lite);outline-offset:2px;}
+  .form .btn{width:100%;margin-top:8px;}
+  .dark .form p{color:var(--text-muted);}
+  .dark .form .form-note{color:var(--text-faint);}
+  .dark .form .form-ok{color:var(--walnut);}
+  .dark .form .btn{background:var(--walnut);color:#fff;}
+  .dark .form .btn:hover{background:var(--walnut-dark);}
+  .form-note{margin-top:16px;font-size:12px;color:var(--text-faint);max-width:none;}
+  .form-ok{display:none;margin-top:16px;font-size:12px;color:var(--walnut);max-width:none;}
+  .form.sent .form-ok{display:block;}
+  .contact > *, .c-item > div{min-width:0;}
+  .c-item a, .c-item span{overflow-wrap:anywhere;}
+  @media (max-width:991px){.contact{grid-template-columns:1fr;gap:64px;}}
+  @media (max-width:600px){.form{padding-left:20px;padding-right:20px;padding-top:32px;padding-bottom:32px;}.f-row, .f-row.three{grid-template-columns:1fr;gap:0;}}
+
+  /* ---------- FUTER ---------- */
+  .footer{background:var(--espresso-2);color:var(--on-dark-muted);padding-top:80px;padding-bottom:32px;}
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:64px;border-bottom:1px solid var(--dark-line);}
+  .footer-brand img{height:32px;filter:invert(1) brightness(1.1) sepia(0.2);margin-bottom:24px;}
+  .footer-brand p{font-size:16px;max-width:36ch;color:var(--on-dark-muted);}
+  .footer h4{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--walnut-lite);margin-bottom:20px;}
+  .footer li{margin-bottom:12px;font-size:16px;}
+  .footer a:hover{color:var(--on-dark);}
+  .footer-big{font-family:var(--head);font-weight:300;font-size:clamp(64px, 16vw, 224px);line-height:0.8;letter-spacing:-0.02em;color:transparent;-webkit-text-stroke:1px var(--dark-line-strong);margin-top:64px;white-space:nowrap;overflow:hidden;}
+  .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:32px;font-size:12px;color:var(--on-dark-faint);border-top:1px solid var(--dark-line);margin-top:32px;}
+  @media (max-width:991px){.footer-top{grid-template-columns:1fr 1fr;}}
+  @media (max-width:600px){.footer-top{grid-template-columns:1fr;gap:32px;}}
+
+  /* ---------- REVEAL: sadržaj je uvek vidljiv, JS dodaje samo mali pomeraj ---------- */
+  .js .reveal{transform:translateY(16px);transition:transform .9s var(--ease);}
+  .js .reveal.is-visible{transform:none;}
+  @media (prefers-reduced-motion:reduce){.js .reveal{transform:none;transition:none;}html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- filter za tehnički crtež: ivice fotografije postaju linije olovke -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="sketch" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="saturate" values="0"/>
+      <feGaussianBlur stdDeviation="0.6"/>
+      <feConvolveMatrix order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" preserveAlpha="true"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="-5" intercept="1.02"/>
+        <feFuncG type="linear" slope="-5.4" intercept="1.02"/>
+        <feFuncB type="linear" slope="-6" intercept="1.02"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-l">
+        <a href="https://www.google.com/maps/search/?api=1&query=Vladimira+Pogačića+4a+Beograd" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Vladimira Pogačića 4a, Ledine, Beograd</a>
+        <a class="hide-m" href="mailto:office@idconcept.rs"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>office@idconcept.rs</a>
+      </div>
+      <div class="topbar-r">
+        <a href="tel:+38163334514"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>063/334-514</a>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
-      <a href="#" class="logo">
-        <img src="assets/logo.png" alt="ID Concept - studio za dizajn enterijera i nameštaj po meri">
-      </a>
-      <nav class="nav-desktop">
-        <a href="#usluge">Usluge</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#o-nama">O nama</a>
-        <a href="#kontakt">Kontakt</a>
+      <a href="#top" class="logo"><img src="assets/logo.png" alt="ID Concept, Interior Design Concept" width="244" height="42"></a>
+      <nav class="nav" aria-label="Glavni meni">
+        <a href="#saradnja">Saradnja</a>
+        <a href="#namestaj">Nameštaj po meri</a>
+        <a href="#koncepti">Koncepti</a>
+        <a href="#proces">Proces</a>
+        <a href="#studio">Studio</a>
       </nav>
-      <a href="#kontakt" class="btn btn-primary nav-cta">Zatraži ponudu</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#usluge">Usluge</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#o-nama">O nama</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="btn btn-primary">Zatraži ponudu</a>
+      <a href="#kontakt" class="btn header-cta">Zatraži ponudu</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-content">
-        <span class="hero-eyebrow">ID Concept · Beograd</span>
-        <h1>Enterijer i nameštaj po meri, tačno onako kako zamišljaš svoj prostor</h1>
-        <p>Projektujemo enterijer i pravimo nameštaj po meri za stanove, kuće i poslovne prostore u Beogradu. Vodimo ceo posao, od skice do montaže, tako da ti ne trčiš između pet izvođača.</p>
-        <a href="#kontakt" class="btn btn-primary">Zatraži besplatnu ponudu za projekat</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#saradnja" class="m-link"><span>02</span>Saradnja</a>
+    <a href="#namestaj" class="m-link"><span>03</span>Nameštaj po meri</a>
+    <a href="#koncepti" class="m-link"><span>05</span>Koncepti</a>
+    <a href="#proces" class="m-link"><span>06</span>Proces</a>
+    <a href="#studio" class="m-link"><span>09</span>Studio</a>
+    <a href="#kontakt" class="m-link"><span>11</span>Kontakt</a>
+    <a href="#kontakt" class="btn">Zatraži ponudu</a>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-text">
+          <span class="tag">Interior Design Concept · Beograd</span>
+          <h1><span>Tvoj prostor</span><span>je tvoj <em>ID.</em></span></h1>
+          <p class="hero-lead">Projektujemo enterijer i pravimo nameštaj po meri za stanove, kuće, apartmane i poslovne prostore. Jedan tim vodi posao od merenja do montaže poslednjeg fronta.</p>
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn">Pošalji zahtev za projekat
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+            <a href="tel:+38163334514" class="link-tel">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+              <span>063/334-514</span>
+            </a>
+          </div>
+          <ul class="hero-points">
+            <li><b>3</b>načina saradnje, biraš koliko preuzimamo</li>
+            <li><b>8</b>koraka od zahteva do montaže</li>
+            <li><b>1</b>tim: dizajneri, zanatlije, menadžeri</li>
+          </ul>
+        </div>
+
+        <div class="hero-art">
+          <div class="cabinet" id="cabinet">
+            <div class="cabinet-photo">
+              <img src="assets/hero-bg-na-vodi.jpg" alt="Stan na Beogradu na vodi: kuhinja sa ostrvom, barske stolice, vitrine sa LED rasvetom i dnevna soba u pozadini" fetchpriority="high">
+            </div>
+            <div class="cabinet-sheen" aria-hidden="true"></div>
+            <div class="doors" id="doors" aria-hidden="true">
+              <div class="door door-l"></div>
+              <div class="door door-r"></div>
+            </div>
+          </div>
+          <div class="hero-photo-2">
+            <img src="assets/luksuz-malo-kvadrata-8.jpg" alt="Kuhinja po meri u malom stanu, sivi frontovi i barski pult sa dve stolice">
+          </div>
+          <div class="float-card fc-save">
+            <b>Popust na projekat</b>
+            <span>kad nameštaj izrađujemo mi, projektovanje plaćaš manje</span>
+          </div>
+          <div class="float-card fc-project">
+            <b><i></i>Beograd na vodi</b>
+            <span>Dizajn enterijera, nameštaj i kompletno opremanje stana</span>
+          </div>
+          <div class="dim-v" aria-hidden="true"><b>PO MERI</b></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Beograd na vodi</span><span>Kula West 65</span><span>Sky Line</span><span>Vračar</span><span>Zemun</span><span>Novi Beograd</span><span>Gospodara Vučića</span><span>Vikendica u Beogradu</span><span>Umetnički dom</span><span>Salonac</span>
+        <span>Beograd na vodi</span><span>Kula West 65</span><span>Sky Line</span><span>Vračar</span><span>Zemun</span><span>Novi Beograd</span><span>Gospodara Vučića</span><span>Vikendica u Beogradu</span><span>Umetnički dom</span><span>Salonac</span>
       </div>
     </div>
-  </section>
 
-  <!-- BOL UVOD -->
-  <section class="bol">
-    <div class="wrap">
-      <p>Zamišljaš dnevnu sobu koja izgleda kao iz kataloga, a dobiješ plakar koji ne staje u ugao i kuhinju koja ne prati stil ostatka stana.</p>
-      <p>Radovi kasne, majstori se ne slažu međusobno, a ti provodiš vikende trčeći između tri firme da sve to poveže u jednu celinu.</p>
-      <p>Kod nas jedan tim vodi ceo projekat, od prve skice do poslednjeg šrafa, tako da ne moraš ti da budeš koordinator.</p>
-    </div>
-  </section>
-
-  <!-- USLUGE -->
-  <section id="usluge">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Šta radimo</span>
-        <h2>Dizajn i nameštaj, spojeni u jedan proces</h2>
-        <p>Od projekta enterijera do izrade komada nameštaja koji tačno stanu u prostor koji imaš.</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"></path>
-              <path d="M14 6l3 3"></path>
-            </svg>
-          </div>
-          <h3>Dizajn i projektovanje enterijera</h3>
-          <p>Pravimo koncept, 3D vizuelizaciju i tehničke crteže za tvoj stan, kuću ili poslovni prostor, pre nego što se pokrene bilo kakav rad.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="16" rx="1"></rect>
-              <path d="M3 10h18"></path>
-              <path d="M9 4v6"></path>
-            </svg>
-          </div>
-          <h3>Kuhinje po meri</h3>
-          <p>Radimo kuhinje koje prate raspored tvog prostora, sa materijalima i šarama koje ti biraš u razgovoru sa dizajnerom.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="3" width="16" height="18" rx="1"></rect>
-              <path d="M12 3v18"></path>
-              <path d="M8 11h.01"></path>
-              <path d="M16 11h.01"></path>
-            </svg>
-          </div>
-          <h3>Plakari i dnevne sobe po meri</h3>
-          <p>Izrađujemo plakare, regale i nameštaj za dnevnu sobu tačno po dimenzijama prostorije, bez praznog hoda pored zida.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="6" width="18" height="12" rx="1"></rect>
-              <path d="M3 6l9-3 9 3"></path>
-              <path d="M8 18v2"></path>
-              <path d="M16 18v2"></path>
-            </svg>
-          </div>
-          <h3>Kancelarijski nameštaj po meri</h3>
-          <p>Opremamo kancelarije stolovima, radnim stanicama i sedenjem koje odgovara broju ljudi i tipu posla koji radiš.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFICE STRIP -->
-  <section class="office-strip">
-    <div class="wrap office-inner">
-      <div class="office-text reveal">
-        <span class="eyebrow">Za poslovni prostor</span>
-        <h3>Kancelarija koja izgleda ozbiljno i radi kako treba</h3>
-        <p>Biramo radne stolove, stolice i sedenje za zajedničke prostore tako da prostor prati broj ljudi i način na koji tim zaista radi.</p>
-        <p>Sve se uklapa u jedinstven vizuelni identitet prostora, umesto da izgleda kao spoj slučajnih komada iz kataloga.</p>
-      </div>
-      <div class="office-photos">
-        <img src="assets/id-concept-kancelarijski-stolovi.jpg" alt="Kancelarijski radni stolovi sa mrežastim stolicama u poslovnom prostoru">
-        <img src="assets/id-concept-kancelarijske-stolice-1.jpg" alt="Kancelarijske fotelje u različitim bojama tapacirunga">
-        <img src="assets/id-concept-kancelarijske-sofe.jpg" alt="Modularne kancelarijske sofe za zajedničke prostorije">
-      </div>
-    </div>
-  </section>
-
-  <!-- KAKO RADIMO -->
-  <section>
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Kako radimo s tobom</span>
-        <h2>Tri načina da dođeš do prostora koji ti odgovara</h2>
-      </div>
-
-      <div class="approach-grid">
-        <div class="approach-card reveal">
-          <div class="approach-num">01</div>
-          <h3>Ključ u ruke</h3>
-          <p>Ti kažeš kako želiš da izgleda i funkcioniše prostor, mi vodimo projekat, nabavku i izvođače do useljenja.</p>
-        </div>
-        <div class="approach-card reveal">
-          <div class="approach-num">02</div>
-          <h3>Kreirajmo zajedno</h3>
-          <p>Radiš sa dizajnerom rame uz rame, biraš materijale i raspored, a mi pretvaramo tvoje ideje u tehnički izvodljivo rešenje.</p>
-        </div>
-        <div class="approach-card reveal">
-          <div class="approach-num">03</div>
-          <h3>Dizajn bez renoviranja</h3>
-          <p>Ne planiraš gradjevinske radove, samo želiš nov nameštaj i raspored. Radimo i to, bez rušenja zidova i bušenja podova.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio" style="background:var(--bg-alt);">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Portfolio</span>
-        <h2>Nekoliko prostora koje smo projektovali i opremili</h2>
-        <p>Svaki projekat kreće od stvarnih dimenzija i stvarnih potreba ljudi koji tamo žive ili rade.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="portfolio-item reveal">
-          <img src="assets/Dizajn-enterijera-i-namestaja-i-kompletno-opremanje-za-moderan-stan-u-Beogradu-na-vodi-14.jpg" alt="Moderan stan na Beogradu na vodi sa kuhinjom i dnevnom sobom opremljenim po meri">
-          <div class="portfolio-caption">
-            <span>Stan · Beograd na vodi</span>
-            <p>Kompletno opremanje kuhinje, dnevne sobe i garderobera u jednom projektu.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-          <img src="assets/Dizajn-enterijera-i-namestaj-po-meri-Luksuz-u-malo-kvadrata-23.jpg" alt="Mali stan sa kuhinjom i dnevnom sobom u istom prostoru, opremljen nameštajem po meri">
-          <div class="portfolio-caption">
-            <span>Stan · manji kvadratni metri</span>
-            <p>Kuhinja i dnevna soba u jednom prostoru, raspoređene tako da ništa ne smeta.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-          <img src="assets/Sta-je-moderan-stil-u-enterijeru_3-300x200.jpeg" alt="Dnevna soba u modernom stilu sa drvenim policama i sivim nameštajem">
-          <div class="portfolio-caption">
-            <span>Dnevna soba · moderan stil</span>
-            <p>Kombinacija drveta i toplih neutralnih tonova, bez suvišnih detalja.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-          <img src="assets/kancelarijski-namestaj-id-concept-1-300x200.png" alt="Kancelarijski prostor sa radnim stolovima opremljen po meri">
-          <div class="portfolio-caption">
-            <span>Poslovni prostor</span>
-            <p>Radne stanice i osvetljenje prilagođeni rasporedu tima koji tu sedi.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-cta reveal">
-        <a href="#kontakt" class="btn btn-outline">Pošalji mi slične ideje za moj prostor</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- O BRENDU -->
-  <section id="o-nama" class="about-section">
-    <div class="wrap about-inner">
-      <div class="about-text reveal">
-        <span class="eyebrow">O studiju</span>
-        <h2>ID Concept je studio iz Beograda, ne posrednik između tebe i deset firmi</h2>
-        <p>Radimo dizajn enterijera i nameštaj po meri od prve skice do poslednjeg detalja montaže. Nema prepiske između dizajnera, majstora i tebe kao trećeg posrednika - ti razgovaraš direktno sa timom koji vodi projekat.</p>
-        <p>Svaki prostor tretiramo kao poseban zadatak, ne kao ponavljanje istog kataloškog rešenja. Zato pitanja o dimenzijama, materijalima i navikama ljudi koji tu žive ili rade dolaze pre svake skice.</p>
-        <div class="about-traits">
-          <div class="trait">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7l7-4z"></path></svg>
-            Profesionalan pristup
-          </div>
-          <div class="trait">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M5 8c2-3 5-4 7-2s5 1 7-2"></path></svg>
-            Sofisticiran dizajn
-          </div>
-          <div class="trait">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>
-            Personalizovano rešenje
-          </div>
-        </div>
-      </div>
-
-      <div class="about-media reveal">
-        <img src="assets/savetnik-tv-happy-irena-karlicic-300x200.jpg" alt="Predstavnica ID Concept-a govori o dizajnu enterijera u televizijskoj emisiji Savetnik">
-        <div class="about-media-caption">
-          <span>Medijsko gostovanje</span>
-          <p>O dizajnu enterijera i nameštaju po meri govorili smo i u televizijskoj emisiji Savetnik.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAKT / CTA -->
-  <section id="kontakt" class="contact-section">
-    <div class="wrap contact-inner">
-      <div class="contact-info reveal">
-        <span class="eyebrow">Zakaži razgovor</span>
-        <h2>Pošalji zahtev i dobij predlog rešenja za svoj prostor</h2>
-        <p>Napiši nam kakav prostor imaš i šta te muči u njemu. Vraćamo se s predlogom pravca i okvirnom procenom, bez obaveze.</p>
-
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2z"></path></svg>
+    <!-- 01 ZVUČI POZNATO -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head reveal">
           <div>
-            <strong>Telefon</strong>
-            <span>+381 60 123 4567</span>
+            <span class="tag">01 / Zvuči poznato</span>
+            <h2>Stan je lep na slici.<br>U njemu ništa ne staje.</h2>
+          </div>
+          <p>Ovo čujemo na prvom sastanku skoro svaki put. Problem retko pravi jedan komad nameštaja. Pravi ga to što niko nije gledao ceo prostor odjednom.</p>
+        </div>
+        <div class="pain-grid">
+          <div class="pain reveal">
+            <i>“</i>
+            <h3>Plakar iz kataloga ostavi prazan ugao</h3>
+            <p>Standardne dimenzije ne znaju gde ti je kosina, radijator ili prozor. Ostaje prostor u kom se skuplja prašina.</p>
+          </div>
+          <div class="pain reveal">
+            <i>“</i>
+            <h3>Kuhinja ne prati ostatak stana</h3>
+            <p>Front, radna ploča i pod biraju se u tri radnje, u tri različita dana. Na kraju se vidi da ne pripadaju istom stanu.</p>
+          </div>
+          <div class="pain reveal">
+            <i>“</i>
+            <h3>Tri firme, a koordinator si ti</h3>
+            <p>Električar čeka stolara, stolar čeka mere, a ti vikendom zoveš sve redom da bi posao išao dalje.</p>
+          </div>
+          <div class="pain reveal">
+            <i>“</i>
+            <h3>Znam šta mi se sviđa, ne znam da nacrtam</h3>
+            <p>Imaš fotografije sa Instagrama i osećaj za stil, ali ne znaš kako to da prevedeš u mere i materijale.</p>
           </div>
         </div>
+        <div class="pain-answer reveal">
+          <p>Zato krećemo od merenja i razgovora o tome kako živiš, pa tek onda od skice.</p>
+          <a href="#saradnja" class="btn">Pogledaj kako radimo
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg>
+    <!-- 02 TRI NAČINA SARADNJE -->
+    <section class="section tint" id="saradnja">
+      <div class="wrap">
+        <div class="head reveal">
           <div>
-            <strong>Email</strong>
-            <span>info@idconcept.rs</span>
+            <span class="tag">02 / Tri načina saradnje</span>
+            <h2>Biraš koliko posla<br>preuzimamo mi</h2>
           </div>
+          <p>Isti tim, tri različita obima. Neko želi da se useli u gotov prostor, neko da bira svaku pločicu, a neko samo da opremi novogradnju bez rušenja zidova.</p>
         </div>
 
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <div>
-            <strong>Lokacija</strong>
-            <span>Beograd, radimo u celoj Srbiji</span>
+        <div class="pkg-tabs" role="tablist" aria-label="Načini saradnje">
+          <button class="pkg-tab" role="tab" id="tab-k" aria-selected="true" aria-controls="pkgPanel" data-pkg="k">
+            <small>01</small><strong>Ključ u ruke</strong><span>Od ideje do useljenja, bez stresa</span>
+          </button>
+          <button class="pkg-tab" role="tab" id="tab-z" aria-selected="false" aria-controls="pkgPanel" data-pkg="z" tabindex="-1">
+            <small>02</small><strong>Kreirajmo zajedno</strong><span>Za one koji žele da učestvuju</span>
+          </button>
+          <button class="pkg-tab" role="tab" id="tab-b" aria-selected="false" aria-controls="pkgPanel" data-pkg="b" tabindex="-1">
+            <small>03</small><strong>Dizajn bez renoviranja</strong><span>Opremaš novogradnju</span>
+          </button>
+        </div>
+
+        <div class="pkg" id="pkgPanel" role="tabpanel" aria-labelledby="tab-k" data-pkg="k">
+          <div class="pkg-media">
+            <img data-for="k" src="assets/po-renderu-bg-na-vodi.jpg" alt="Dnevna soba na Beogradu na vodi uređena po renderu: TV zid sa rasvetom, vitrine i trpezarija" loading="lazy">
+            <img data-for="z" src="assets/gospodara-vucica.jpg" alt="Dnevna soba i kuhinja u industrijskom stilu, sivo ostrvo i tamnoplavi zid" loading="lazy" hidden>
+            <img data-for="b" src="assets/sky-line.jpg" alt="Dnevna soba u stanu Sky Line sa vitrinom za vino, TV komodom i garderoberom" loading="lazy" hidden>
+          </div>
+          <div class="pkg-body" id="pkgBody">
+            <p class="pkg-quote" id="pkgQuote">Ti kažeš kako želiš da živiš. Mi vodimo projekat, nabavku i izvođače do useljenja.</p>
+            <p class="pkg-desc" id="pkgDesc">Obuhvata sve: projektovanje, renoviranje, izradu nameštaja, tehniku, rasvetu i dodatke. Radove organizujemo i nadziremo mi.</p>
+            <ul class="pkg-list">
+              <li data-b="1">Tlocrtni raspored zidova i nameštaja</li>
+              <li data-b="0">Podne i zidne obloge</li>
+              <li data-b="0">Struja, voda i odvod po novom rasporedu</li>
+              <li data-b="0">Plafon i rasveta</li>
+              <li data-b="0">Unutrašnja i spoljašnja stolarija</li>
+              <li data-b="1">Dizajn nameštaja</li>
+              <li data-b="1">Izrada i montaža nameštaja po meri</li>
+              <li data-b="1">Izbor i nabavka tehnike</li>
+              <li data-b="1">Komadni nameštaj, aksesoari i rasveta</li>
+              <li data-b="0">3D render izabranog rešenja</li>
+              <li data-b="1">Organizacija radova i nadzor</li>
+            </ul>
+            <p class="pkg-note">Organizaciju radova i nadzor radimo kad angažuješ naše izvođače, za renoviranje ili za izradu nameštaja. Ako imaš svoje majstore, dobijaš projekat i dokumentaciju za njih.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <form class="contact-form reveal" action="#" method="post">
-        <h3>Pošalji zahtev za ponudu</h3>
-        <p>Popuni formu, javljamo se u toku jednog radnog dana.</p>
+    <!-- 03 NAMEŠTAJ PO MERI -->
+    <section class="section dark" id="namestaj">
+      <div class="wrap furn">
+        <div class="furn-text reveal">
+          <span class="tag">03 / Nameštaj po meri</span>
+          <h2>Nameštaj crtamo<br>za tačno taj zid</h2>
+          <p>U izradi nameštaja smo najjači. Kuhinju, orman, policu za knjige ili celu dnevnu sobu projektujemo prema poziciji u prostoru, a izrađuju je naši majstori.</p>
+          <ul class="furn-cats">
+            <li>Kuhinje</li><li>Ormani i plakari</li><li>Police za knjige</li><li>Dnevne sobe</li><li>Kancelarije</li>
+          </ul>
+          <ul class="furn-services">
+            <li>
+              <i>A</i>
+              <div>
+                <h3>Dizajn nameštaja prema pozicijama u prostoru</h3>
+                <p>Za unikatan nameštaj koji prati tvoj stil i dimenzije prostora, element po element.</p>
+              </div>
+            </li>
+            <li>
+              <i>B</i>
+              <div>
+                <h3>Izrada po postojećem dizajnu arhitekte</h3>
+                <p>Imaš gotov projekat? Izrađujemo ga precizno, a savet dobijaš kad ti zatreba.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="ime">Ime i prezime</label>
-            <input type="text" id="ime" name="ime" placeholder="Tvoje ime" required>
+        <div class="wardrobe-wrap reveal">
+          <div class="wardrobe" id="wardrobe">
+            <div class="bay">
+              <div class="bay-in">
+                <div class="rod"></div>
+                <div class="hanger" style="left:18%;background:#8c7a68;"></div>
+                <div class="hanger" style="left:34%;background:#4e5a66;"></div>
+                <div class="hanger" style="left:50%;background:#d8cfc2;"></div>
+                <div class="hanger" style="left:66%;background:#6b4f3b;"></div>
+                <div class="shelf" style="bottom:12%;"></div>
+              </div>
+              <button class="front" aria-label="Otvori levi front"><span class="pull"></span></button>
+            </div>
+            <div class="bay">
+              <div class="bay-in">
+                <div class="shelf" style="top:34%;"><span class="obj" style="left:12%;width:8%;height:48px;background:#c9b79f;"></span><span class="obj" style="left:22%;width:6%;height:56px;background:#5c6a61;"></span><span class="obj" style="left:30%;width:8%;height:40px;background:#a8805c;"></span><span class="obj" style="left:62%;width:20%;height:24px;border-radius:24px 24px 0 0;background:#e8e0d4;"></span></div>
+                <div class="shelf" style="top:62%;"><span class="obj" style="left:14%;width:28%;height:32px;background:#3f3a36;"></span><span class="obj" style="left:58%;width:8%;height:64px;background:#b89572;"></span><span class="obj" style="left:68%;width:8%;height:52px;background:#e3d7c6;"></span></div>
+                <div class="shelf" style="bottom:12%;"></div>
+              </div>
+              <button class="front" aria-label="Otvori srednji front"><span class="pull"></span></button>
+            </div>
+            <div class="bay">
+              <div class="bay-in">
+                <div class="shelf" style="top:24%;"><span class="obj" style="left:16%;width:64%;height:16px;background:#d6c7b3;"></span></div>
+                <div class="shelf" style="top:44%;"><span class="obj" style="left:16%;width:64%;height:24px;background:#7f6a58;"></span></div>
+                <div class="shelf" style="top:64%;"><span class="obj" style="left:20%;width:24%;height:32px;background:#e8e0d4;"></span><span class="obj" style="left:48%;width:28%;height:32px;background:#5a4a3e;"></span></div>
+                <div class="shelf" style="bottom:12%;"></div>
+              </div>
+              <button class="front" aria-label="Otvori desni front"><span class="pull"></span></button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon" name="telefon" placeholder="06X XXX XXXX" required>
+          <div class="swatches" role="group" aria-label="Materijal frontova">
+            <span class="swatches-label">Front</span>
+            <button class="sw" aria-pressed="true" data-c="#6d4c33" data-g="1"><i class="gr" style="--c:#6d4c33"></i>Orah</button>
+            <button class="sw" aria-pressed="false" data-c="#b48b5e" data-g="1"><i class="gr" style="--c:#b48b5e"></i>Hrast</button>
+            <button class="sw" aria-pressed="false" data-c="#e9e4dc" data-g="0"><i style="--c:#e9e4dc"></i>Beli mat</button>
+            <button class="sw" aria-pressed="false" data-c="#8f8a83" data-g="0"><i style="--c:#8f8a83"></i>Siva</button>
+            <button class="sw" aria-pressed="false" data-c="#2f2c29" data-g="0"><i style="--c:#2f2c29"></i>Antracit</button>
+          </div>
+          <p class="wardrobe-hint">Klikni na front da ga otvoriš. Materijal, boju i teksturu biramo zajedno, pre nego što ijedna ploča ode na sečenje.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 OD LINIJE DO STANA -->
+    <section class="section" id="render">
+      <div class="wrap">
+        <div class="head reveal">
+          <div>
+            <span class="tag">04 / Pre izrade</span>
+            <h2>Prvo linija,<br>pa tek onda stan</h2>
+          </div>
+          <p>Pre nego što majstor uzme meru, vidiš prostor na papiru. Posle merenja na terenu dobijaš raspored, dizajn nameštaja, mood board, materijale i tehničku dokumentaciju. Prevuci klizač i uporedi.</p>
+        </div>
+
+        <div class="compare reveal" id="compare">
+          <img src="assets/po-renderu-bg-na-vodi.jpg" alt="Gotova dnevna soba na Beogradu na vodi: TV zid, vitrine sa LED rasvetom i kuhinja u pozadini" loading="lazy">
+          <div class="compare-sketch" aria-hidden="true">
+            <img src="assets/po-renderu-bg-na-vodi.jpg" alt="" loading="lazy">
+          </div>
+          <span class="compare-lab l">Linija</span>
+          <span class="compare-lab r">Realizacija</span>
+          <div class="compare-line"><span class="compare-knob"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+          <input class="compare-range" id="compareRange" type="range" min="0" max="100" value="50" aria-label="Pomeri granicu između crteža i gotovog prostora">
+        </div>
+        <div class="compare-cap">
+          <span><b>Realizacija enterijera po renderu</b> · Beograd na vodi</span>
+          <span>Crtež je ilustracija. Pravi projekat dobijaš sa merama i specifikacijom materijala.</span>
+        </div>
+
+        <ul class="deliver">
+          <li class="reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24"/><path d="M4 16h12V4M16 22h12M22 16v12"/></svg>
+            <b>Tlocrtni raspored</b><span>Gde idu zidovi, nameštaj, utičnice i rasveta</span>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="4" width="20" height="24"/><path d="M16 4v24M13 15v2M19 15v2"/></svg>
+            <b>Dizajn nameštaja</b><span>Svaki element nacrtan za svoju poziciju</span>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="11" height="9"/><rect x="17" y="6" width="11" height="15"/><rect x="4" y="17" width="11" height="9"/><path d="M17 26h11"/></svg>
+            <b>Mood board</b><span>Predlozi za aksesoare, rasvetu i tehniku</span>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="10" r="6"/><circle cx="22" cy="10" r="6"/><circle cx="16" cy="21" r="6"/></svg>
+            <b>Materijali i boje</b><span>Izbor materijala, boja i tekstura</span>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h12l6 6v18H8z"/><path d="M20 4v6h6M12 16h10M12 20h10M12 24h6"/></svg>
+            <b>Tehnička dokumentacija</b><span>Za izvođenje radova, bez nagađanja na terenu</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 KONCEPTI ENTERIJERA -->
+    <section class="section tint" id="koncepti">
+      <div class="wrap">
+        <div class="head reveal">
+          <div>
+            <span class="tag">05 / Koncepti enterijera</span>
+            <h2>Stanovi koji nose<br>lični pečat vlasnika</h2>
+          </div>
+          <div>
+            <p style="margin-bottom:24px;">Od garsonjere u Kuli West 65 do kuhinje u starogradskom salonu. Svaki projekat je krenuo od stvarnih dimenzija i ljudi koji tu žive.</p>
+            <div class="filters" role="group" aria-label="Filtriraj projekte">
+              <button aria-pressed="true" data-f="sve">Sve</button>
+              <button aria-pressed="false" data-f="stanovi">Stanovi</button>
+              <button aria-pressed="false" data-f="kuhinje">Kuhinje</button>
+            </div>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="tvoja@email.adresa" required>
+        <div class="works" id="works">
+          <figure class="work w2 h2" data-cat="stanovi kuhinje">
+            <img src="assets/bg-na-vodi-12.jpg" alt="Otvoren prostor kuhinje i dnevne sobe na Beogradu na vodi, ostrvo sa barskim stolicama i vitrine sa rasvetom" loading="lazy">
+            <figcaption><small>Beograd na vodi</small><b>Dizajn i kompletno opremanje modernog stana</b></figcaption>
+          </figure>
+          <figure class="work h2" data-cat="stanovi">
+            <img src="assets/salonac.jpg" alt="Kuhinja u starogradskom salonu, beli frontovi uz visok prozor" loading="lazy">
+            <figcaption><small>Salonac</small><b>Starogradski stil i moderni materijali</b></figcaption>
+          </figure>
+          <figure class="work" data-cat="stanovi">
+            <img src="assets/west-65.jpg" alt="Garsonjera u Kuli West 65, barski pult i tamni visoki elementi" loading="lazy">
+            <figcaption><small>Kula West 65</small><b>Moderna garsonjera</b></figcaption>
+          </figure>
+          <figure class="work" data-cat="stanovi">
+            <img src="assets/vracar.jpg" alt="Trpezarija i dnevna soba u stanu na Vračaru, kožna garnitura i drveni sto" loading="lazy">
+            <figcaption><small>Vračar</small><b>Luksuzni dizajn nameštaja</b></figcaption>
+          </figure>
+          <figure class="work w2" data-cat="stanovi kuhinje">
+            <img src="assets/luksuz-malo-kvadrata-23.jpg" alt="Mali stan sa kuhinjom, radnim pultom i dnevnom sobom u istom prostoru" loading="lazy">
+            <figcaption><small>Luksuz u malo kvadrata</small><b>Kuhinja i dnevna soba u jednom prostoru</b></figcaption>
+          </figure>
+          <figure class="work" data-cat="kuhinje">
+            <img src="assets/zemun-kuhinja.jpg" alt="Klasična siva kuhinja u Zemunu sa vitrinama i šarenim pločicama" loading="lazy">
+            <figcaption><small>Zemun · online</small><b>Klasična kuhinja, moderan dodir</b></figcaption>
+          </figure>
+          <figure class="work" data-cat="kuhinje">
+            <img src="assets/kuhinja-industrijski.jpg" alt="Kuhinja u toplom industrijskom stilu sa kliznim drvenim vratima i otvorenim policama" loading="lazy">
+            <figcaption><small>Kuhinja</small><b>Topli industrijski dizajn</b></figcaption>
+          </figure>
+          <figure class="work" data-cat="stanovi">
+            <img src="assets/novi-beograd.jpg" alt="Open space stan na Novom Beogradu sa pregradom od drveta i visećom lampom" loading="lazy">
+            <figcaption><small>Novi Beograd</small><b>Transformacija u open space</b></figcaption>
+          </figure>
+          <figure class="work" data-cat="stanovi">
+            <img src="assets/sky-line.jpg" alt="Stan Sky Line sa vitrinom za vino i TV zidom" loading="lazy">
+            <figcaption><small>Sky Line</small><b>Stan sa unikatnim nameštajem</b></figcaption>
+          </figure>
+          <figure class="work w2" data-cat="stanovi">
+            <img src="assets/tinejdzer.jpg" alt="Soba za tinejdžera sa radnim stolom u uglu, gejmerskom stolicom i muralom" loading="lazy">
+            <figcaption><small>Ključ u ruke</small><b>Soba za tinejdžera</b></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 PROCES -->
+    <section class="section dark" id="proces">
+      <div class="wrap proc">
+        <div class="proc-media">
+          <span class="tag">06 / Proces</span>
+          <h2 style="margin-bottom:40px;">Osam koraka,<br>bez iznenađenja</h2>
+          <figure><img src="assets/projektovanje-beograd.jpg" alt="Dizajnerka crta tlocrt olovkom, oko nje uzorci tkanina, drveta i boja" loading="lazy"></figure>
+          <div class="tip">
+            <b>Pre sastanka</b>
+            <p>Pripremi nekoliko fotografija enterijera koji ti se sviđaju. Tako brže dolazimo do pravca koji ti odgovara.</p>
+          </div>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-n">01</span><div><h3>Popuniš zahtev</h3><p>Izabereš uslugu i upišeš tip prostora, kvadraturu i broj prostorija. Skice i fotografije možeš odmah da priložiš.</p></div></li>
+          <li class="step reveal"><span class="step-n">02</span><div><h3>Javljamo se i dopunjujemo</h3><p>Pitamo ono što fali za okvirnu ponudu i dogovaramo sastanak uživo ili online.</p></div></li>
+          <li class="step reveal"><span class="step-n">03</span><div><h3>Sastanak</h3><p>Definišemo usluge koje ti trebaju, okvirni budžet za svaku i termin merenja.</p></div></li>
+          <li class="step reveal"><span class="step-n">04</span><div><h3>Potvrda saradnje</h3><p>Uplatom za dogovorene usluge potvrđuješ uslove, a mi počinjemo da radimo.</p></div></li>
+          <li class="step reveal"><span class="step-n">05</span><div><h3>Merenje i predlog rešenja</h3><p>Izlazimo na teren, merimo i sklapamo sve tvoje želje u jedan predlog.</p>
+            <ul class="chips"><li>Tlocrtni raspored</li><li>Dizajn nameštaja</li><li>Mood board</li><li>Materijali, boje, teksture</li><li>Tehnička dokumentacija</li></ul></div></li>
+          <li class="step reveal"><span class="step-n">06</span><div><h3>Finalna ponuda i avans</h3><p>Kad usvojiš idejno rešenje, šaljemo kompletnu ponudu za sve pozicije i opremu. Posle avansa ulazimo u realizaciju.</p></div></li>
+          <li class="step reveal"><span class="step-n">07</span><div><h3>Izrada i montaža</h3><p>Proizvodnja i montaža idu po roku koji je upisan u ponudu. Naš tim prati sve na terenu.</p></div></li>
+          <li class="step reveal"><span class="step-n">08</span><div><h3>Praćenje i primopredaja</h3><p>Kad radove izvode naši izvođači, pratimo ih do kraja i odgovaramo za kvalitet i rokove.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 07 ZAŠTO -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head reveal">
+          <div>
+            <span class="tag">07 / Zašto ID Concept</span>
+            <h2>Dizajn i izrada<br>na istom stolu</h2>
+          </div>
+          <p>Kad isti tim crta i izrađuje, crtež ne mora da se prevodi za drugu firmu. Mere, materijali i rokovi ostaju na jednom mestu.</p>
+        </div>
+        <div class="why">
+          <div class="why-card reveal">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="14" r="6"/><path d="M8 34c0-7 5-11 12-11s12 4 12 11"/></svg>
+            <h3>Personalizovana rešenja</h3>
+            <p>Nameštaj pravimo prema tvojim željama i tvom prostoru, ne prema katalogu.</p>
+          </div>
+          <div class="why-card reveal">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 30h32M8 30V18M16 30V10M24 30V14M32 30V22"/></svg>
+            <h3>Kvalitet i preciznost</h3>
+            <p>Majstori rade sa kvalitetnim materijalima, a mere se uzimaju na licu mesta.</p>
+          </div>
+          <div class="why-card accent reveal">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 20l14-14h14v14L20 34z"/><circle cx="27" cy="13" r="3"/></svg>
+            <h3>Popust na projektovanje</h3>
+            <p>Kad nameštaj izrađujemo mi, na projektovanju uštediš.</p>
+          </div>
+          <div class="why-card reveal">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="6" width="28" height="28" rx="2"/><path d="M13 20l5 5 9-10"/></svg>
+            <h3>Sve na jednom mestu</h3>
+            <p>Od ideje do realizacije, jedan kontakt vodi te kroz ceo proces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 POSLOVNI PROSTOR -->
+    <section class="section tint">
+      <div class="wrap office">
+        <div class="office-text reveal">
+          <span class="tag">08 / Poslovni prostor</span>
+          <h2>Kancelarija koja<br>radi kao tim</h2>
+          <p>Opremamo kancelarije stolovima, stolicama i sofama za zajedničke prostore. Broj radnih mesta i raspored pratimo prema tome kako tim zaista radi.</p>
+          <p>Sve se uklapa u jedan vizuelni identitet, umesto da izgleda kao spoj komada iz različitih kataloga.</p>
+        </div>
+        <div class="office-tiles">
+          <figure class="tile reveal"><img src="assets/id-concept-kancelarijski-stolovi.jpg" alt="Kancelarijski radni stolovi sa mrežastim stolicama narandžastog sedišta" loading="lazy"><span>Stolovi</span></figure>
+          <figure class="tile reveal"><img src="assets/id-concept-kancelarijske-stolice-1.jpg" alt="Kancelarijske fotelje u sivoj, zelenoj i tirkiznoj boji" loading="lazy"><span>Stolice</span></figure>
+          <figure class="tile reveal"><img src="assets/id-concept-kancelarijske-sofe.jpg" alt="Modularne kancelarijske sofe u ljubičastoj i tirkiznoj boji" loading="lazy"><span>Sofe</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 STUDIO -->
+    <section class="section" id="studio">
+      <div class="wrap about">
+        <div class="about-text reveal">
+          <span class="tag">09 / Studio</span>
+          <p class="about-quote">Svaki prostor je jedinstven. Zato <em>ID</em> u imenu znači <em>Interior Design</em>, ali i identitet.</p>
+          <p>ID Concept je studio iz Beograda, sa Ledina. U timu su dizajneri, zanatlije i menadžeri projekata. Radimo stanove, kuće, apartmane, kancelarije i poslovne prostore.</p>
+          <p>Svaki projekat počinje analizom tvojih želja i prostora. Pitanja o dimenzijama, materijalima i navikama ljudi koji tu žive dolaze pre prve linije na papiru.</p>
+          <ul class="team"><li>Dizajneri enterijera</li><li>Zanatlije</li><li>Menadžeri projekata</li></ul>
+        </div>
+        <div class="press reveal">
+          <div class="press-head"><span>U medijima</span><span>Happy TV · 2021</span></div>
+          <div class="press-body">
+            <img src="assets/savetnik-tv-happy-irena-karlicic-300x200.jpg" alt="Irena Karličić, dizajnerka enterijera ID Concept-a, u emisiji Savetnik na Happy TV" loading="lazy">
+            <div>
+              <b>Irena Karličić u emisiji Savetnik</b>
+              <p>Naša dizajnerka i enterijeristkinja govorila je o idejama za uređenje doma.</p>
+            </div>
+          </div>
+          <div class="facts">
+            <div><b>15+</b><span>koncepata enterijera u portfoliju</span></div>
+            <div><b>5</b><span>usluga, od dizajna do izrade po projektu arhitekte</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="section tint">
+      <div class="wrap faq-grid">
+        <div class="head reveal">
+          <span class="tag">10 / Pitanja</span>
+          <h2>Pre nego<br>što pišeš</h2>
+          <p>Ovo nas najčešće pitaju pre prvog sastanka. Ako tvoje pitanje nije tu, pozovi.</p>
+          <a href="tel:+38163334514" class="link-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span>063/334-514</span></a>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Moram li da uzmem ceo paket?<i></i></summary>
+            <p>Ne. U usluzi Kreirajmo zajedno sve stavke su opcione. Ako su podovi već postavljeni ili je tehnika kupljena, preuzimamo samo ono u čemu ti treba pomoć.</p>
+          </details>
+          <details>
+            <summary>Imam projekat od arhitekte. Možete li samo da izradite nameštaj?<i></i></summary>
+            <p>Možemo. Izrađujemo nameštaj po postojećem dizajnu arhitekte, a kad nešto u projektu treba prilagoditi meri na terenu, predložimo rešenje.</p>
+          </details>
+          <details>
+            <summary>Da li nadzirete radove ako imam svoje majstore?<i></i></summary>
+            <p>Organizaciju i nadzor radimo samo kad radove izvode izvođači iz našeg kruga saradnika. Za tvoje majstore pripremamo projekat i tehničku dokumentaciju.</p>
+          </details>
+          <details>
+            <summary>Može li sastanak online?<i></i></summary>
+            <p>Može. Posle zahteva dogovaramo sastanak uživo ili online. Kuhinju u Zemunu smo, na primer, dizajnirali online.</p>
+          </details>
+          <details>
+            <summary>Radite li van Beograda?<i></i></summary>
+            <p>Studio je u Beogradu, na Ledinama. U zahtevu upiši lokaciju prostora pa ćemo se dogovoriti oko merenja.</p>
+          </details>
+          <details>
+            <summary>Kako izgleda plaćanje?<i></i></summary>
+            <p>Uplatom za dogovorene usluge potvrđuješ saradnju. Kad usvojiš idejno rešenje, dobijaš kompletnu ponudu, a realizacija kreće posle avansa.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 KONTAKT -->
+    <section class="section dark" id="kontakt">
+      <div class="wrap contact">
+        <div class="contact-info reveal">
+          <span class="tag">11 / Kontakt</span>
+          <h2>Pošalji zahtev,<br>javljamo se mi</h2>
+          <p>Opiši prostor i šta te u njemu muči. Posle zahteva te zovemo da dopunimo podatke i dogovorimo sastanak.</p>
+          <div class="c-list">
+            <div class="c-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+              <div><small>Telefon</small><a href="tel:+38163334514">063/334-514</a></div>
+            </div>
+            <div class="c-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>
+              <div><small>Email</small><a href="mailto:office@idconcept.rs">office@idconcept.rs</a></div>
+            </div>
+            <div class="c-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><small>Studio</small><a href="https://www.google.com/maps/search/?api=1&query=Vladimira+Pogačića+4a+Beograd" target="_blank" rel="noopener">Vladimira Pogačića 4a, Ledine, 11070 Beograd</a></div>
+            </div>
+          </div>
+          <div class="map">
+            <iframe title="Mapa: ID Concept, Vladimira Pogačića 4a, Beograd" src="https://maps.google.com/maps?q=Vladimira%20Poga%C4%8Di%C4%87a%204a%2C%20Beograd&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="tip">Vrsta projekta</label>
-          <select id="tip" name="tip">
-            <option>Stan ili kuća</option>
-            <option>Poslovni prostor</option>
-            <option>Samo nameštaj po meri</option>
-            <option>Nisam siguran/na</option>
-          </select>
-        </div>
+        <form class="form reveal" id="leadForm" action="#" method="post">
+          <h3>Zahtev za projekat</h3>
+          <p>Polja sa zvezdicom su obavezna. Ostalo nam pomaže da se pripremimo za razgovor.</p>
 
-        <div class="form-group">
-          <label for="poruka">Opiši ukratko prostor i šta ti treba</label>
-          <textarea id="poruka" name="poruka" placeholder="Npr. dvosoban stan od 55m², treba kuhinja i plakar za spavaću sobu"></textarea>
-        </div>
+          <fieldset class="service-pick">
+            <legend>Usluga koja te zanima</legend>
+            <label><input type="radio" name="usluga" value="Ključ u ruke" checked><span>Ključ u ruke</span></label>
+            <label><input type="radio" name="usluga" value="Kreirajmo zajedno"><span>Kreirajmo zajedno</span></label>
+            <label><input type="radio" name="usluga" value="Dizajn bez renoviranja"><span>Dizajn bez renoviranja</span></label>
+            <label><input type="radio" name="usluga" value="Dizajn i izrada nameštaja"><span>Dizajn i izrada nameštaja</span></label>
+            <label><input type="radio" name="usluga" value="Izrada po projektu arhitekte"><span>Po projektu arhitekte</span></label>
+          </fieldset>
 
-        <button type="submit" class="btn btn-primary">Pošalji zahtev za ponudu</button>
-      </form>
-    </div>
-  </section>
+          <div class="f-row">
+            <div class="f"><label for="ime">Ime i prezime *</label><input id="ime" name="ime" type="text" autocomplete="name" required></div>
+            <div class="f"><label for="tel">Telefon *</label><input id="tel" name="telefon" type="tel" autocomplete="tel" placeholder="06X XXX XXXX" required></div>
+          </div>
+          <div class="f-row">
+            <div class="f"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="f"><label for="lok">Lokacija *</label><input id="lok" name="lokacija" type="text" placeholder="Npr. Novi Beograd" required></div>
+          </div>
+          <div class="f-row three">
+            <div class="f">
+              <label for="tip">Tip nekretnine</label>
+              <select id="tip" name="tip">
+                <option>Stan</option><option>Kuća</option><option>Poslovni prostor</option><option>Javni prostor</option><option>Apartman</option><option>Hotel</option><option>Nije na listi</option>
+              </select>
+            </div>
+            <div class="f"><label for="kv">Kvadratura</label><input id="kv" name="kvadratura" type="text" inputmode="numeric" placeholder="m²"></div>
+            <div class="f"><label for="sobe">Prostorija</label><input id="sobe" name="prostorije" type="text" inputmode="numeric" placeholder="Broj"></div>
+          </div>
+          <div class="f">
+            <label for="poruka">Šta ti treba</label>
+            <textarea id="poruka" name="poruka" placeholder="Npr. dvosoban stan od 55 m², kuhinja i plakar u spavaćoj sobi. Imam fotografije koje mi se sviđaju."></textarea>
+          </div>
+          <button type="submit" class="btn">Pošalji zahtev za projekat
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-note">Skice i fotografije prostora pošalji na office@idconcept.rs uz zahtev.</p>
+          <p class="form-ok" role="status">Otvorili smo ti email sa popunjenim zahtevom. Samo ga pošalji.</p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="wrap">
-      <div class="footer-inner">
-        <div class="footer-col footer-logo">
-          <img src="assets/logo.png" alt="ID Concept logo">
-          <p>Studio za dizajn enterijera i izradu nameštaja po meri, iz Beograda.</p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="ID Concept" width="244" height="42">
+          <p>Studio za dizajn i projektovanje enterijera i izradu nameštaja po meri, iz Beograda.</p>
         </div>
-        <div class="footer-col">
-          <h4>Usluge</h4>
-          <a href="#usluge">Dizajn enterijera</a>
-          <a href="#usluge">Kuhinje po meri</a>
-          <a href="#usluge">Plakari i dnevne sobe</a>
-          <a href="#usluge">Kancelarijski nameštaj</a>
+        <div>
+          <h4>Saradnja</h4>
+          <ul><li><a href="#saradnja">Ključ u ruke</a></li><li><a href="#saradnja">Kreirajmo zajedno</a></li><li><a href="#saradnja">Dizajn bez renoviranja</a></li></ul>
         </div>
-        <div class="footer-col">
+        <div>
           <h4>Studio</h4>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#o-nama">O nama</a>
-          <a href="#kontakt">Kontakt</a>
+          <ul><li><a href="#namestaj">Nameštaj po meri</a></li><li><a href="#koncepti">Koncepti enterijera</a></li><li><a href="#proces">Proces</a></li><li><a href="#studio">O nama</a></li></ul>
         </div>
-        <div class="footer-col">
+        <div>
           <h4>Kontakt</h4>
-          <span>+381 60 123 4567</span>
-          <span>info@idconcept.rs</span>
-          <span>Beograd, Srbija</span>
+          <ul><li><a href="tel:+38163334514">063/334-514</a></li><li><a href="mailto:office@idconcept.rs">office@idconcept.rs</a></li><li>Vladimira Pogačića 4a<br>11070 Beograd</li></ul>
         </div>
       </div>
+      <div class="footer-big" aria-hidden="true">Interior Design</div>
       <div class="footer-bottom">
         <span>&copy; 2026 ID Concept. Sva prava zadržana.</span>
-        <span>Dizajn i projektovanje enterijera · Nameštaj po meri</span>
+        <span>Dizajn enterijera · Nameštaj po meri · Beograd</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Header scroll state
-    const header = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 10){
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // header
+  var header = document.getElementById('siteHeader');
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 40); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // mobilni meni
+  var burger = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  function setMenu(open){
+    menu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 991) setMenu(false); });
+
+  // Ormar u herou: odsjaj pređe preko frontova, frontovi se otvore ka tebi i otkriju stan
+  var doors = document.getElementById('doors');
+  var cabinet = document.getElementById('cabinet');
+  if(reduce){
+    cabinet.classList.add('is-open');
+  } else {
+    setTimeout(function(){ doors.classList.add('is-armed'); }, 500);
+    setTimeout(function(){ doors.classList.add('is-open'); cabinet.classList.add('is-open'); }, 1250);
+    setTimeout(function(){ doors.classList.add('done'); }, 3000);
+  }
+
+  // Tri načina saradnje
+  var pkgData = {
+    k:{q:'Ti kažeš kako želiš da živiš. Mi vodimo projekat, nabavku i izvođače do useljenja.',
+       d:'Obuhvata sve: projektovanje, renoviranje, izradu nameštaja, tehniku, rasvetu i dodatke. Radove organizujemo i nadziremo mi.'},
+    z:{q:'Ti biraš u čemu ti treba pomoć. Ostalo radiš sam, uz naš savet.',
+       d:'Na uvodnom razgovoru odlučujemo šta realizuješ sam, gde ti treba konsultacija, a šta preuzimamo u potpunosti. Svaka stavka je opciona.'},
+    b:{q:'Opremaš novogradnju? Uređujemo prostor bez rušenja zidova i bušenja podova.',
+       d:'Raspored, nameštaj po meri, dizajn zidova, tehnika i rasveta. Bez građevinskih radova, bez podova i instalacija. Precrtano nije deo ovog paketa.'}
+  };
+  var tabs = document.querySelectorAll('.pkg-tab');
+  var panel = document.getElementById('pkgPanel');
+  var body = document.getElementById('pkgBody');
+  var quote = document.getElementById('pkgQuote');
+  var desc = document.getElementById('pkgDesc');
+  function selectPkg(tab, focus){
+    var k = tab.getAttribute('data-pkg');
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+    });
+    panel.setAttribute('data-pkg', k);
+    panel.setAttribute('aria-labelledby', tab.id);
+    quote.textContent = pkgData[k].q;
+    desc.textContent = pkgData[k].d;
+    panel.querySelectorAll('.pkg-media img').forEach(function(img){ img.hidden = img.getAttribute('data-for') !== k; });
+    if(!reduce){ body.classList.remove('pkg-anim'); void body.offsetWidth; body.classList.add('pkg-anim'); }
+    if(focus) tab.focus();
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ selectPkg(t); });
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+        e.preventDefault();
+        var n = (i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+        selectPkg(tabs[n], true);
       }
     });
+  });
 
-    // Mobile menu toggle
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburgerBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburgerBtn.classList.toggle('active');
-      hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  // Ormar sa frontovima: materijal + otvaranje
+  var wardrobe = document.getElementById('wardrobe');
+  wardrobe.querySelectorAll('.front').forEach(function(f){
+    f.addEventListener('click', function(){
+      var bay = f.parentNode;
+      var open = bay.classList.toggle('open');
+      f.setAttribute('aria-label', f.getAttribute('aria-label').replace(open ? 'Otvori' : 'Zatvori', open ? 'Zatvori' : 'Otvori'));
     });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburgerBtn.classList.remove('active');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-      });
+  });
+  var sws = document.querySelectorAll('.sw');
+  sws.forEach(function(b){
+    b.addEventListener('click', function(){
+      sws.forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+      wardrobe.style.setProperty('--wood', b.getAttribute('data-c'));
+      wardrobe.style.setProperty('--grain-o', b.getAttribute('data-g'));
+      wardrobe.classList.remove('flash'); void wardrobe.offsetWidth; wardrobe.classList.add('flash');
     });
+  });
 
-    // Scroll reveal
-    if('IntersectionObserver' in window){
-      const revealEls = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      revealEls.forEach(el => observer.observe(el));
-    } else {
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  // Linija -> realizacija
+  var compare = document.getElementById('compare');
+  var range = document.getElementById('compareRange');
+  function applyCompare(){ compare.style.setProperty('--p', range.value + '%'); }
+  range.addEventListener('input', applyCompare);
+  applyCompare();
+  function glide(from, to, ms){
+    if(reduce){ range.value = to; applyCompare(); return; }
+    var start = null;
+    function step(t){
+      if(!start) start = t;
+      var k = Math.min((t - start) / ms, 1);
+      var e = k < 0.5 ? 4*k*k*k : 1 - Math.pow(-2*k + 2, 3) / 2;
+      range.value = Math.round(from + (to - from) * e);
+      applyCompare();
+      if(k < 1) requestAnimationFrame(step);
     }
-  </script>
+    requestAnimationFrame(step);
+  }
 
+  // Filter koncepata
+  var works = document.getElementById('works');
+  var fbtns = document.querySelectorAll('.filters button');
+  fbtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      fbtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+      var f = b.getAttribute('data-f');
+      if(f === 'sve') works.removeAttribute('data-f'); else works.setAttribute('data-f', f);
+    });
+  });
+
+  // Forma: bez servera, sklopi email sa svim podacima
+  var form = document.getElementById('leadForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    var d = new FormData(form);
+    var lines = [
+      'Usluga: ' + d.get('usluga'),
+      'Ime i prezime: ' + d.get('ime'),
+      'Telefon: ' + d.get('telefon'),
+      'Email: ' + d.get('email'),
+      'Lokacija: ' + d.get('lokacija'),
+      'Tip nekretnine: ' + d.get('tip'),
+      'Kvadratura: ' + (d.get('kvadratura') || '-'),
+      'Broj prostorija: ' + (d.get('prostorije') || '-'),
+      '',
+      d.get('poruka') || ''
+    ];
+    window.location.href = 'mailto:office@idconcept.rs?subject=' + encodeURIComponent('Zahtev za projekat - ' + d.get('usluga')) + '&body=' + encodeURIComponent(lines.join('\n'));
+    form.classList.add('sent');
+  });
+
+  // Reveal + klizač koji se sam pomeri kad uđe u ekran
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        en.target.classList.add('is-visible');
+        if(en.target === compare){ glide(50, 78, 900); setTimeout(function(){ glide(78, 22, 1400); }, 1000); setTimeout(function(){ glide(22, 50, 900); }, 2500); }
+        io.unobserve(en.target);
+      });
+    }, {threshold:0.2, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
 </body>
 </html>
